@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TOM" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TOM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="/usr/local/lib/libopencv_core.so" />
+					<Add library="/usr/local/lib/libopencv_gpu.so" />
+					<Add library="/usr/local/lib/libopencv_calib3d.so" />
+					<Add library="/usr/local/lib/libopencv_features2d.so" />
+					<Add library="/home/gmanfred/devel/libraries/opencv/opencv-2.4.6.1/build/lib/cv2.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/TOM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/home/gmanfred/devel/libraries/opencv/opencv/include/" />
+		</Compiler>
+		<Linker>
+			<Add library="/home/gmanfred/devel/libraries/opencv/opencv/build/lib/cv2.so" />
+		</Linker>
+		<Unit filename="Common.cpp" />
+		<Unit filename="Common.h" />
+		<Unit filename="FindCameraMatrices2D2D.cpp" />
+		<Unit filename="FindCameraMatrices2D2D.h" />
+		<Unit filename="FindCameraMatrices3D2D.cpp" />
+		<Unit filename="FindCameraMatrices3D2D.h" />
+		<Unit filename="Image.cpp" />
+		<Unit filename="Image.h" />
+		<Unit filename="Matcher.cpp" />
+		<Unit filename="Matcher.h" />
+		<Unit filename="Object.cpp" />
+		<Unit filename="Object.h" />
+		<Unit filename="Pipeline.cpp" />
+		<Unit filename="Pipeline.h" />
+		<Unit filename="Triangulation.cpp" />
+		<Unit filename="Triangulation.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

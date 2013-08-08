@@ -1,0 +1,124 @@
+# depslib dependency file v1.0
+1375885878 source:/home/gmanfred/devel/these/projects/TOM/Common.cpp
+	"Common.h"
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<iostream>
+	<assert.h>
+	<sys/types.h>
+	<dirent.h>
+	"Image.h"
+
+1375875967 /home/gmanfred/devel/these/projects/TOM/Common.h
+	<opencv2/core/core.hpp>
+	<opencv2/features2d/features2d.hpp>
+	<vector>
+	<iostream>
+	<list>
+	<set>
+
+1375876251 source:/home/gmanfred/devel/these/projects/TOM/FindCameraMatrices2D2D.cpp
+	"FindCameraMatrices2D2D.h"
+	"Triangulation.h"
+	<vector>
+	<iostream>
+	<opencv2/calib3d/calib3d.hpp>
+	<Eigen/Eigen>
+
+1375876098 /home/gmanfred/devel/these/projects/TOM/FindCameraMatrices2D2D.h
+	<opencv2/core/core.hpp>
+	<opencv2/features2d/features2d.hpp>
+	"Common.h"
+
+1375705416 /home/gmanfred/devel/these/projects/TOM/Triangulation.h
+	<opencv2/core/core.hpp>
+	<opencv2/features2d/features2d.hpp>
+	<opencv2/calib3d/calib3d.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<vector>
+	"Common.h"
+
+1375955959 source:/home/gmanfred/devel/these/projects/TOM/FindCameraMatrices3D2D.cpp
+	"FindCameraMatrices3D2D.h"
+
+1375956448 /home/gmanfred/devel/these/projects/TOM/FindCameraMatrices3D2D.h
+	<iostream>
+	<opencv2/core/core.hpp>
+	<opencv2/gpu/gpu.hpp>
+	<opencv2/calib3d/calib3d.hpp>
+	"Common.h"
+
+1375958147 source:/home/gmanfred/devel/these/projects/TOM/Image.cpp
+	"Image.h"
+
+1375956389 /home/gmanfred/devel/these/projects/TOM/Image.h
+	<opencv2/opencv.hpp>
+
+1375953472 source:/home/gmanfred/devel/these/projects/TOM/Matcher.cpp
+	"Matcher.h"
+
+1375953477 /home/gmanfred/devel/these/projects/TOM/Matcher.h
+	<cstdio>
+	<vector>
+	<opencv2/opencv.hpp>
+	<opencv2/core/core.hpp>
+	<opencv2/features2d/features2d.hpp>
+	<opencv2/nonfree/nonfree.hpp>
+	<opencv2/legacy/legacy.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+
+1375880538 source:/home/gmanfred/devel/these/projects/TOM/Object.cpp
+	"Object.h"
+
+1373460373 /home/gmanfred/devel/these/projects/TOM/Object.h
+	<opencv2/opencv.hpp>
+
+1375957542 source:/home/gmanfred/devel/these/projects/TOM/Pipeline.cpp
+	"Pipeline.h"
+
+1375952897 /home/gmanfred/devel/these/projects/TOM/Pipeline.h
+	<queue>
+	"Image.h"
+	"Object.h"
+	"Matcher.h"
+	"FindCameraMatrices2D2D.h"
+	"FindCameraMatrices3D2D.h"
+
+1375706030 source:/home/gmanfred/devel/these/projects/TOM/Triangulation.cpp
+	"Triangulation.h"
+	<iostream>
+
+1375955689 source:/home/gmanfred/devel/these/projects/TOM/main.cpp
+	"test_pipeline.h"
+
+1373456940 /home/gmanfred/devel/libraries/opencv/opencv-2.4.6.1/include//opencv2/opencv.hpp
+	"opencv2/core/core_c.h"
+	"opencv2/core/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+	"opencv2/imgproc/imgproc_c.h"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/photo/photo.hpp"
+	"opencv2/video/video.hpp"
+	"opencv2/features2d/features2d.hpp"
+	"opencv2/objdetect/objdetect.hpp"
+	"opencv2/calib3d/calib3d.hpp"
+	"opencv2/ml/ml.hpp"
+	"opencv2/highgui/highgui_c.h"
+	"opencv2/highgui/highgui.hpp"
+	"opencv2/contrib/contrib.hpp"
+
+1375890593 source:/home/gmanfred/devel/these/projects/TOM/SynPNP.cpp
+	"SynPNP.h"
+
+1375890593 /home/gmanfred/devel/these/projects/TOM/SynPNP.h
+	<cstdlib>
+	<cmath>
+
+1375958218 /home/gmanfred/devel/these/projects/TOM/test_pipeline.h
+	"SynPNP.h"
+	"Pipeline.h"
+
+1375956488 source:/home/gmanfred/devel/these/projects/TOM/test_pipeline.cpp
+	"test_pipeline.h"
+

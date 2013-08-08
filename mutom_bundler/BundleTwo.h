@@ -1,0 +1,9 @@
+#ifndef DEF_MUTOM_BUNDLER_BUNDLETWO
+#define DEF_MUTOM_BUNDLER_BUNDLETWO
+
+class BundleTwo
+{
+
+}
+
+#endif // DEF_MUTOM_BUNDLER_BUNDLETWO

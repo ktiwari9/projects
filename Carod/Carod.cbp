@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Carod" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Carod" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/usr/local/include" />
+					<Add directory="/usr/local/include/pcl-1.7" />
+					<Add directory="/usr/include/eigen3" />
+					<Add directory="/usr/include/vtk-5.8" />
+					<Add directory="/home/gmanfred/devel/sandbox/openMVG/src/" />
+					<Add directory="/home/gmanfred/devel/libraries/opencv/opencv/include/opencv/" />
+					<Add directory="/home/gmanfred/devel/libraries/g2o/trunk/build" />
+					<Add directory="/home/gmanfred/devel/libraries/g2o/trunk/" />
+					<Add directory="/usr/include/suitesparse/" />
+				</Compiler>
+				<Linker>
+					<Add library="/usr/local/lib/libopencv_calib3d.so" />
+					<Add library="/usr/local/lib/libopencv_core.so" />
+					<Add library="/usr/local/lib/libopencv_features2d.so" />
+					<Add library="/usr/local/lib/libopencv_highgui.so" />
+					<Add library="/usr/local/lib/libopencv_imgproc.so" />
+					<Add library="/usr/local/lib/libopencv_nonfree.so" />
+					<Add library="/usr/lib/libboost_filesystem.so" />
+					<Add library="/usr/lib/libboost_system.so" />
+					<Add library="/usr/local/lib/libpcl_io.so" />
+					<Add library="/usr/local/lib/libpcl_visualization.so" />
+					<Add library="/usr/local/lib/libpcl_common.so" />
+					<Add library="/usr/lib/libboost_thread.so" />
+					<Add library="/usr/lib/libvtkCommon.so" />
+					<Add library="/usr/lib/libvtkRendering.so" />
+					<Add library="/usr/lib/libvtkHybrid.so" />
+					<Add library="/usr/lib/libvtkGraphics.so" />
+					<Add library="/usr/lib/libvtk*.so" />
+					<Add library="/home/gmanfred/devel/sandbox/openMVG/build/openMVG/multiview/libopenMVG_multiview.a" />
+					<Add library="/home/gmanfred/devel/sandbox/openMVG/build/openMVG/numeric/libopenMVG_numeric.a" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libgomp.so.1" />
+					<Add library="/usr/local/lib/libg2o_core.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Carod" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="/usr/local/include" />
+					<Add directory="/usr/local/include/pcl-1.7" />
+					<Add directory="/usr/include/eigen3" />
+					<Add directory="/usr/include/vtk-5.8" />
+					<Add directory="/home/gmanfred/devel/sandbox/openMVG/src/" />
+					<Add directory="/home/gmanfred/devel/libraries/opencv/opencv/include/opencv/" />
+					<Add directory="/home/gmanfred/devel/libraries/g2o/trunk/build" />
+					<Add directory="/home/gmanfred/devel/libraries/g2o/trunk/" />
+					<Add directory="/usr/include/suitesparse/" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="/usr/local/lib/libopencv_calib3d.so" />
+					<Add library="/usr/local/lib/libopencv_core.so" />
+					<Add library="/usr/local/lib/libopencv_features2d.so" />
+					<Add library="/usr/local/lib/libopencv_highgui.so" />
+					<Add library="/usr/local/lib/libopencv_imgproc.so" />
+					<Add library="/usr/local/lib/libopencv_nonfree.so" />
+					<Add library="/usr/lib/libboost_filesystem.so" />
+					<Add library="/usr/lib/libboost_system.so" />
+					<Add library="/usr/local/lib/libpcl_io.so" />
+					<Add library="/usr/local/lib/libpcl_visualization.so" />
+					<Add library="/usr/local/lib/libpcl_common.so" />
+					<Add library="/usr/lib/libboost_thread.so" />
+					<Add library="/usr/lib/libvtkCommon.so" />
+					<Add library="/usr/lib/libvtkRendering.so" />
+					<Add library="/usr/lib/libvtkHybrid.so" />
+					<Add library="/usr/lib/libvtkGraphics.so" />
+					<Add library="/usr/lib/libvtk*.so" />
+					<Add library="/home/gmanfred/devel/sandbox/openMVG/build/openMVG/multiview/libopenMVG_multiview.a" />
+					<Add library="/home/gmanfred/devel/sandbox/openMVG/build/openMVG/numeric/libopenMVG_numeric.a" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libgomp.so.1" />
+					<Add library="/usr/local/lib/libg2o_core.so" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Detector.cpp" />
+		<Unit filename="Detector.h" />
+		<Unit filename="Matcher.cpp" />
+		<Unit filename="Matcher.h" />
+		<Unit filename="NonLinearLS.cpp" />
+		<Unit filename="NonLinearLS.h" />
+		<Unit filename="Object.cpp" />
+		<Unit filename="Object.h" />
+		<Unit filename="PoseEstimator.cpp" />
+		<Unit filename="PoseEstimator.h" />
+		<Unit filename="Random.cpp" />
+		<Unit filename="Random.h" />
+		<Unit filename="Timestamp.cpp" />
+		<Unit filename="Timestamp.h" />
+		<Unit filename="Trainer.cpp" />
+		<Unit filename="Trainer.h" />
+		<Unit filename="Viewer.cpp" />
+		<Unit filename="Viewer.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="rpnp.cpp" />
+		<Unit filename="rpnp.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

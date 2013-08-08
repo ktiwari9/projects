@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="Detector.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="468" topLine="0" />
+	</File>
+	<File name="Detector.h" open="1" top="0" tabpos="10">
+		<Cursor position="26" topLine="0" />
+	</File>
+	<File name="Matcher.cpp" open="1" top="1" tabpos="11">
+		<Cursor position="1552" topLine="35" />
+	</File>
+	<File name="Matcher.h" open="1" top="0" tabpos="12">
+		<Cursor position="567" topLine="19" />
+	</File>
+	<File name="NonLinearLS.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="4137" topLine="162" />
+	</File>
+	<File name="NonLinearLS.h" open="0" top="0" tabpos="6">
+		<Cursor position="170" topLine="0" />
+	</File>
+	<File name="Object.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="545" topLine="0" />
+	</File>
+	<File name="Object.h" open="1" top="0" tabpos="8">
+		<Cursor position="1210" topLine="17" />
+	</File>
+	<File name="PoseEstimator.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="842" topLine="0" />
+	</File>
+	<File name="PoseEstimator.h" open="0" top="0" tabpos="5">
+		<Cursor position="1464" topLine="19" />
+	</File>
+	<File name="Random.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1032" topLine="16" />
+	</File>
+	<File name="Random.h" open="0" top="0" tabpos="0">
+		<Cursor position="2669" topLine="86" />
+	</File>
+	<File name="Timestamp.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="3810" topLine="123" />
+	</File>
+	<File name="Timestamp.h" open="0" top="0" tabpos="0">
+		<Cursor position="3535" topLine="99" />
+	</File>
+	<File name="Trainer.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="167" topLine="0" />
+	</File>
+	<File name="Trainer.h" open="1" top="0" tabpos="9">
+		<Cursor position="73" topLine="0" />
+	</File>
+	<File name="Viewer.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="357" topLine="8" />
+	</File>
+	<File name="Viewer.h" open="1" top="0" tabpos="5">
+		<Cursor position="286" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="690" topLine="3" />
+	</File>
+	<File name="rpnp.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="23686" topLine="681" />
+	</File>
+	<File name="rpnp.h" open="0" top="0" tabpos="7">
+		<Cursor position="489" topLine="6" />
+	</File>
+</CodeBlocks_layout_file>

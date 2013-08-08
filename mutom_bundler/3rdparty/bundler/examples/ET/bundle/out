@@ -1,0 +1,3186 @@
+[OnInit] Running program ../../bin/bundler
+Loading images from file 'list.txt'
+[BundlerApp::OnInit] Processing options...
+[BundlerApp::OnInit] Loading frame...
+[BundlerApp::OnInit] Loading images...
+[LoadMatchTable] Loading matches
+[PruneDoubleMatches] Pruned[0,1] = 4 / 182
+[PruneDoubleMatches] Pruned[0,2] = 0 / 50
+[PruneDoubleMatches] Pruned[0,3] = 5 / 368
+[PruneDoubleMatches] Pruned[0,4] = 1 / 127
+[PruneDoubleMatches] Pruned[1,2] = 3 / 238
+[PruneDoubleMatches] Pruned[1,3] = 2 / 89
+[PruneDoubleMatches] Pruned[1,4] = 0 / 87
+[PruneDoubleMatches] Pruned[2,3] = 3 / 27
+[PruneDoubleMatches] Pruned[2,4] = 1 / 63
+[PruneDoubleMatches] Pruned[3,4] = 0 / 66
+[PruneDoubleMatches] Pruned[4,5] = 0 / 47
+[PruneDoubleMatches] Pruned[4,8] = 5 / 31
+[PruneDoubleMatches] Pruned[5,6] = 2 / 150
+[PruneDoubleMatches] Pruned[5,7] = 3 / 152
+[PruneDoubleMatches] Pruned[5,8] = 3 / 98
+[PruneDoubleMatches] Pruned[6,7] = 3 / 274
+[PruneDoubleMatches] Pruned[6,8] = 0 / 49
+[PruneDoubleMatches] Pruned[7,8] = 0 / 109
+[SifterApp::LoadKeys] Loading keys...
+[SifterApp::LoadKeys] Loading keys from image 0...
+[GetJPEGDimensions] File ./et000.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loading keys from image 1...
+[GetJPEGDimensions] File ./et001.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loading keys from image 2...
+[GetJPEGDimensions] File ./et002.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loading keys from image 3...
+[GetJPEGDimensions] File ./et003.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loading keys from image 4...
+[GetJPEGDimensions] File ./et004.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loading keys from image 5...
+[GetJPEGDimensions] File ./et005.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loading keys from image 6...
+[GetJPEGDimensions] File ./et006.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loading keys from image 7...
+[GetJPEGDimensions] File ./et007.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loading keys from image 8...
+[GetJPEGDimensions] File ./et008.jpg: ( 640 , 480 )
+[SifterApp::LoadKeys] Loaded keys in 1.390s
+Sum of squares tolerance reached
+   4.451777e-07  -1.739871e-04  -2.688449e-01 
+   1.143088e-04  -7.646550e-04  2.430337e-02 
+   2.430012e-01  -2.672625e-02  2.469614e+00 
+   7.553568e-06  -1.117298e-04  -2.688450e-01 
+   2.001504e-04  -1.283051e-05  2.430306e-02 
+   2.430011e-01  -2.672687e-02  2.469614e+00 
+Inliers[0,1] = 173 out of 178
+Inliers[0,1] = 173 out of 173
+Sum of squares tolerance reached
+   1.167569e-05  -2.498873e-05  -1.039861e-01 
+   7.337638e-05  -8.806536e-05  1.524349e-02 
+   9.162231e-02  9.284878e-05  2.650073e+00 
+   1.170717e-05  -1.369275e-05  -1.039861e-01 
+   7.362683e-05  1.797260e-06  1.524348e-02 
+   9.162231e-02  9.277512e-05  2.650073e+00 
+Inliers[0,2] = 48 out of 50
+Inliers[0,2] = 48 out of 48
+Sum of squares tolerance reached
+   -1.095996e-04  9.443633e-05  8.551686e-01 
+   1.548887e-04  -8.745270e-05  5.640726e-01 
+   -8.279296e-01  -6.034636e-01  6.886674e+00 
+   -4.053336e-05  -2.830082e-07  8.551686e-01 
+   5.029887e-05  5.598462e-05  5.640725e-01 
+   -8.279296e-01  -6.034636e-01  6.886674e+00 
+Inliers[0,3] = 351 out of 363
+Inliers[0,3] = 351 out of 351
+Sum of squares tolerance reached
+   6.786382e-03  -3.978131e-03  -1.162559e-01 
+   -7.148315e-03  4.189733e-03  -1.112093e-01 
+   8.248033e-02  1.408357e-01  1.082096e+00 
+   -4.763009e-05  2.029505e-06  -1.162530e-01 
+   -2.333497e-05  4.011063e-05  -1.112123e-01 
+   8.247840e-02  1.408369e-01  1.082096e+00 
+Inliers[0,4] = 121 out of 126
+Inliers[0,4] = 121 out of 121
+Sum of squares tolerance reached
+   2.401914e-04  -1.538993e-03  1.860103e+00 
+   -1.203028e-02  6.304259e-02  3.773165e-02 
+   -1.776507e+00  -3.231539e-01  -3.482357e+01 
+   -7.110624e-05  1.931309e-04  1.860103e+00 
+   -6.790760e-04  -1.178660e-04  3.773864e-02 
+   -1.776512e+00  -3.231299e-01  -3.482357e+01 
+Inliers[1,2] = 232 out of 235
+Inliers[1,2] = 232 out of 232
+Sum of squares tolerance reached
+   -6.961179e-06  1.041261e-04  1.541077e-01 
+   -1.468411e-05  -4.579841e-04  -3.237635e-03 
+   -1.711764e-01  -9.264082e-03  4.072443e-01 
+   -7.509226e-06  1.139325e-04  1.541077e-01 
+   -4.001978e-05  -4.639214e-06  -3.237972e-03 
+   -1.711764e-01  -9.264189e-03  4.072443e-01 
+Inliers[1,3] = 85 out of 87
+Inliers[1,3] = 85 out of 85
+Sum of squares tolerance reached
+   1.052745e-01  1.714203e-02  -1.356267e-01 
+   -1.164009e-02  -1.855020e-03  -1.332235e+00 
+   -2.402444e-01  1.479198e+00  -4.461602e+00 
+   -1.440456e-04  2.615463e-04  -1.355473e-01 
+   -9.804214e-04  -1.481052e-04  -1.332243e+00 
+   -2.402247e-01  1.479201e+00  -4.461602e+00 
+Inliers[1,4] = 83 out of 87
+Inliers[1,4] = 83 out of 83
+Sum of squares tolerance reached
+   5.687795e-06  5.887234e-05  1.011203e-01 
+   3.122637e-05  7.734131e-04  2.779922e-03 
+   -1.160859e-01  6.959411e-03  2.402042e+00 
+   6.594400e-06  7.967130e-05  1.011203e-01 
+   -2.385535e-06  2.302630e-06  2.780532e-03 
+   -1.160859e-01  6.959428e-03  2.402042e+00 
+Inliers[2,3] = 23 out of 24
+Inliers[2,3] = 23 out of 23
+Sum of squares tolerance reached
+   -2.219356e-02  -1.023774e-02  -2.162171e+00 
+   -4.535687e-03  -1.664758e-03  5.973560e+00 
+   2.955721e+00  -6.606677e+00  9.179664e+01 
+   -9.967171e-04  -9.469140e-04  -2.162185e+00 
+   3.152901e-03  1.705239e-03  5.973555e+00 
+   2.955720e+00  -6.606678e+00  9.179664e+01 
+Inliers[2,4] = 61 out of 62
+Inliers[2,4] = 61 out of 61
+Sum of squares tolerance reached
+   5.953039e-03  -4.367739e-03  -4.266830e-01 
+   -7.102542e-03  5.252988e-03  -3.637669e-01 
+   3.337390e-01  4.598855e-01  1.251755e+01 
+   -1.720636e-04  7.787334e-06  -4.266804e-01 
+   -1.550087e-05  1.902908e-04  -3.637699e-01 
+   3.337362e-01  4.598875e-01  1.251755e+01 
+Inliers[3,4] = 64 out of 66
+Inliers[3,4] = 64 out of 64
+Sum of squares tolerance reached
+   -3.366616e-05  1.425324e-04  -1.220285e-01 
+   3.100234e-05  5.928953e-05  4.321728e-02 
+   1.323879e-01  2.215883e-02  -1.505382e+00 
+   -2.848267e-05  1.094664e-04  -1.220286e-01 
+   4.550372e-05  -3.321627e-05  4.321719e-02 
+   1.323879e-01  2.215886e-02  -1.505382e+00 
+Inliers[4,5] = 46 out of 47
+Inliers[4,5] = 46 out of 46
+Sum of squares tolerance reached
+   -2.543432e-04  6.447796e-05  9.517342e-02 
+   -2.381748e-04  -2.866075e-04  3.950489e-02 
+   6.725857e-02  6.167646e-02  -6.039814e+00 
+   -2.433060e-04  5.570771e-05  9.517345e-02 
+   -3.049463e-04  -2.335504e-04  3.950468e-02 
+   6.725831e-02  6.167667e-02  -6.039814e+00 
+Inliers[4,8] = 24 out of 26
+Inliers[4,8] = 24 out of 24
+Sum of squares tolerance reached
+   -3.630555e-03  1.024081e-03  -5.460021e-02 
+   4.573660e-04  -1.172295e-04  -3.922031e-01 
+   8.465259e-02  3.707734e-01  1.492384e+00 
+   3.477613e-05  1.895188e-04  -5.460077e-02 
+   -6.003119e-05  5.770441e-07  -3.922030e-01 
+   8.465072e-02  3.707738e-01  1.492384e+00 
+Inliers[5,6] = 145 out of 148
+Inliers[5,6] = 145 out of 145
+Sum of squares tolerance reached
+   6.760883e-04  1.035982e-03  3.232046e-01 
+   -6.280924e-05  2.760647e-04  -5.662962e-01 
+   -2.992261e-01  5.006621e-01  -3.525835e+01 
+   -4.784140e-05  6.504154e-04  3.232053e-01 
+   -5.359525e-04  2.406750e-05  -5.662958e-01 
+   -2.992251e-01  5.006626e-01  -3.525835e+01 
+Inliers[5,7] = 143 out of 149
+Inliers[5,7] = 143 out of 143
+Sum of squares tolerance reached
+   2.523732e-05  1.043264e-03  4.274660e-01 
+   2.437493e-05  2.443136e-03  -1.592301e-01 
+   4.382284e-01  -4.702411e-02  -9.115466e+00 
+   -7.192019e-05  9.873715e-05  4.274662e-01 
+   -2.280221e-04  -1.056830e-05  -1.592296e-01 
+   4.382283e-01  -4.702554e-02  -9.115466e+00 
+Inliers[5,8] = 94 out of 95
+Inliers[5,8] = 94 out of 94
+x is within tolerance
+   8.410814e-08  -7.204313e-04  -8.072029e-01 
+   6.493940e-04  1.360046e-04  -6.739588e-01 
+   7.559810e-01  6.938009e-01  -6.611697e+00 
+   -3.332866e-05  -6.843028e-04  -8.072029e-01 
+   6.897886e-04  9.232665e-05  -6.739587e-01 
+   7.559809e-01  6.938009e-01  -6.611697e+00 
+Inliers[6,7] = 267 out of 271
+Inliers[6,7] = 267 out of 267
+Sum of squares tolerance reached
+   -1.917592e-06  3.180025e-04  8.256584e-01 
+   4.708633e-04  -1.568869e-03  1.904741e-01 
+   7.176403e-01  4.186990e-01  -6.955916e+01 
+   1.487731e-04  5.825645e-05  8.256584e-01 
+   -3.258759e-04  -1.955275e-04  1.904741e-01 
+   7.176400e-01  4.186997e-01  -6.955916e+01 
+Inliers[6,8] = 42 out of 49
+Inliers[6,8] = 42 out of 42
+Sum of squares tolerance reached
+   3.406464e-06  1.020906e-03  3.976529e+00 
+   8.360217e-03  -2.339723e-02  3.493277e-01 
+   3.800646e+00  1.480200e+00  -3.300478e+02 
+   7.184809e-04  -9.487512e-04  3.976528e+00 
+   -8.433895e-05  -1.368805e-04  3.493348e-01 
+   3.800646e+00  1.480201e+00  -3.300478e+02 
+Inliers[7,8] = 105 out of 109
+Inliers[7,8] = 105 out of 105
+[LeastSquaresFit] Residual error (before) is 9.078e+02
+pre:    9.141303e-01  -1.637368e-02  2.019517e+01 
+   -1.557443e-01  8.316436e-01  2.983791e+01 
+   2.243272e-04  -3.525274e-04  1.000000e+00 
+post:    9.137980e-01  -1.500110e-02  2.056245e+01 
+   -1.559229e-01  8.332289e-01  2.996401e+01 
+   2.286072e-04  -3.536392e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 8.034e+02
+Inliers[0,1] = 83 out of 173
+Inliers[0,1] = 83 out of 173
+Ratio[0,1] = 4.798e-01
+   9.137980e-01  -1.500110e-02  2.056245e+01 
+   -1.559229e-01  8.332289e-01  2.996401e+01 
+   2.286072e-04  -3.536392e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 2.183e+02
+pre:    8.711313e-01  1.590261e-02  2.891930e+01 
+   -5.069139e-01  7.714994e-01  9.226467e+01 
+   1.036306e-04  -7.171945e-04  1.000000e+00 
+post:    8.719122e-01  1.952616e-02  2.949170e+01 
+   -5.057311e-01  7.709574e-01  9.188688e+01 
+   1.148749e-04  -7.125000e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 1.367e+02
+Inliers[0,2] = 21 out of 48
+Inliers[0,2] = 21 out of 48
+Ratio[0,2] = 4.375e-01
+   8.719122e-01  1.952616e-02  2.949170e+01 
+   -5.057311e-01  7.709574e-01  9.188688e+01 
+   1.148749e-04  -7.125000e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 1.313e+03
+pre:    9.749956e-01  4.195212e-02  1.284753e+01 
+   -6.619843e-03  1.010548e+00  -3.120119e+01 
+   -4.740332e-05  1.086951e-04  1.000000e+00 
+post:    9.749703e-01  4.194240e-02  1.285100e+01 
+   -6.641173e-03  1.010642e+00  -3.119365e+01 
+   -4.738167e-05  1.089751e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 8.188e+02
+Inliers[0,3] = 201 out of 351
+Inliers[0,3] = 201 out of 351
+Ratio[0,3] = 5.726e-01
+   9.749703e-01  4.194240e-02  1.285100e+01 
+   -6.641173e-03  1.010642e+00  -3.119365e+01 
+   -4.738167e-05  1.089751e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 8.730e+02
+pre:    1.206998e+00  2.484708e-01  -5.866667e+01 
+   -4.772516e-01  8.861498e-01  4.522048e+01 
+   1.888079e-04  -3.662654e-04  1.000000e+00 
+post:    1.207548e+00  2.478074e-01  -5.876847e+01 
+   -4.775003e-01  8.870720e-01  4.521208e+01 
+   1.904996e-04  -3.723986e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 5.497e+02
+Inliers[0,4] = 83 out of 121
+Inliers[0,4] = 83 out of 121
+Ratio[0,4] = 6.860e-01
+   1.207548e+00  2.478074e-01  -5.876847e+01 
+   -4.775003e-01  8.870720e-01  4.521208e+01 
+   1.904996e-04  -3.723986e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 8.072e+02
+pre:    9.615228e-01  1.095701e-01  1.495620e+01 
+   -3.275465e-01  8.868854e-01  5.015865e+01 
+   -3.745239e-05  -3.797195e-04  1.000000e+00 
+post:    9.611036e-01  1.087841e-01  1.499620e+01 
+   -3.274151e-01  8.868547e-01  5.008529e+01 
+   -3.775369e-05  -3.841619e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 6.564e+02
+Inliers[1,2] = 128 out of 232
+Inliers[1,2] = 128 out of 232
+Ratio[1,2] = 5.517e-01
+   9.611036e-01  1.087841e-01  1.499620e+01 
+   -3.274151e-01  8.868547e-01  5.008529e+01 
+   -3.775369e-05  -3.841619e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 2.251e+02
+pre:    1.095372e+00  7.334913e-02  -3.083501e-01 
+   2.020863e-01  1.019363e+00  -7.300735e+01 
+   -3.825514e-05  4.908124e-04  1.000000e+00 
+post:    1.095372e+00  7.340017e-02  -4.014796e-01 
+   2.022438e-01  1.019490e+00  -7.301856e+01 
+   -3.970789e-05  4.908701e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 1.987e+02
+Inliers[1,3] = 34 out of 85
+Inliers[1,3] = 34 out of 85
+Ratio[1,3] = 4.000e-01
+   1.095372e+00  7.340017e-02  -4.014796e-01 
+   2.022438e-01  1.019490e+00  -7.301856e+01 
+   -3.970789e-05  4.908701e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 1.517e+02
+pre:    1.613253e+00  3.268928e-01  -1.164229e+02 
+   -3.330826e-01  1.065037e+00  6.623770e+00 
+   5.031926e-04  4.329542e-05  1.000000e+00 
+post:    1.613562e+00  3.266617e-01  -1.164559e+02 
+   -3.326859e-01  1.065029e+00  6.508529e+00 
+   5.042932e-04  4.100555e-05  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 1.000e+02
+Inliers[1,4] = 54 out of 83
+Inliers[1,4] = 54 out of 83
+Ratio[1,4] = 6.506e-01
+   1.613562e+00  3.266617e-01  -1.164559e+02 
+   -3.326859e-01  1.065029e+00  6.508529e+00 
+   5.042932e-04  4.100555e-05  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 5.595e+01
+pre:    4.879507e-01  -3.409950e-02  -8.184583e+01 
+   -2.557490e-01  6.444025e-01  -2.120658e+02 
+   1.383380e-03  4.032041e-04  1.000000e+00 
+post:    4.560872e-01  -2.279241e-02  -8.597315e+01 
+   -2.519725e-01  6.327007e-01  -2.081787e+02 
+   1.428443e-03  3.506919e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 2.267e+01
+Inliers[2,3] = 10 out of 23
+Inliers[2,3] = 10 out of 23
+Ratio[2,3] = 4.348e-01
+   4.560872e-01  -2.279241e-02  -8.597315e+01 
+   -2.519725e-01  6.327007e-01  -2.081787e+02 
+   1.428443e-03  3.506919e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 2.107e+02
+pre:    1.687166e+00  3.323809e-02  -1.510947e+02 
+   1.240570e-01  1.109267e+00  -7.111672e+01 
+   4.374813e-04  2.442471e-04  1.000000e+00 
+post:    1.685656e+00  3.241829e-02  -1.510464e+02 
+   1.236546e-01  1.108512e+00  -7.098893e+01 
+   4.320554e-04  2.447672e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 1.524e+02
+Inliers[2,4] = 40 out of 61
+Inliers[2,4] = 40 out of 61
+Ratio[2,4] = 6.557e-01
+   1.685656e+00  3.241829e-02  -1.510464e+02 
+   1.236546e-01  1.108512e+00  -7.098893e+01 
+   4.320554e-04  2.447672e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 3.722e+02
+pre:    1.285205e+00  1.697348e-01  -7.930156e+01 
+   -4.861516e-01  9.097273e-01  8.021518e+01 
+   2.009557e-04  -6.285809e-04  1.000000e+00 
+post:    1.285807e+00  1.698874e-01  -7.920195e+01 
+   -4.869686e-01  9.114513e-01  8.035801e+01 
+   2.063060e-04  -6.340816e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 2.921e+02
+Inliers[3,4] = 36 out of 64
+Inliers[3,4] = 36 out of 64
+Ratio[3,4] = 5.625e-01
+   1.285807e+00  1.698874e-01  -7.920195e+01 
+   -4.869686e-01  9.114513e-01  8.035801e+01 
+   2.063060e-04  -6.340816e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 5.454e+01
+pre:    1.007004e+00  6.012947e-01  4.736727e+01 
+   -1.337605e+00  9.279023e-01  2.829771e+02 
+   1.231471e-03  -1.185771e-03  1.000000e+00 
+post:    9.942282e-01  5.967700e-01  4.831679e+01 
+   -1.327723e+00  9.204315e-01  2.809209e+02 
+   1.193349e-03  -1.175394e-03  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 2.511e+01
+Inliers[4,5] = 43 out of 46
+Inliers[4,5] = 43 out of 46
+Ratio[4,5] = 9.348e-01
+   9.942282e-01  5.967700e-01  4.831679e+01 
+   -1.327723e+00  9.204315e-01  2.809209e+02 
+   1.193349e-03  -1.175394e-03  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 2.184e+01
+pre:    2.152844e-02  -4.231418e-01  -1.235680e+02 
+   6.621474e-01  -3.181176e-01  -3.549428e+01 
+   -7.565811e-04  -7.984654e-04  1.000000e+00 
+post:    1.859395e-02  -4.223161e-01  -1.229348e+02 
+   6.608296e-01  -3.199161e-01  -3.485925e+01 
+   -7.513025e-04  -8.086516e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 1.701e+01
+Inliers[4,8] = 22 out of 24
+Inliers[4,8] = 22 out of 24
+Ratio[4,8] = 9.167e-01
+   1.859395e-02  -4.223161e-01  -1.229348e+02 
+   6.608296e-01  -3.199161e-01  -3.485925e+01 
+   -7.513025e-04  -8.086516e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 3.658e+02
+pre:    1.054124e+00  -9.330462e-02  -3.167093e+00 
+   7.296963e-02  9.843415e-01  4.104058e+00 
+   -9.928327e-05  8.427639e-05  1.000000e+00 
+post:    1.053519e+00  -9.268185e-02  -3.154402e+00 
+   7.328555e-02  9.849239e-01  4.084698e+00 
+   -1.003448e-04  8.927596e-05  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 2.616e+02
+Inliers[5,6] = 52 out of 145
+Inliers[5,6] = 52 out of 145
+Ratio[5,6] = 3.586e-01
+   1.053519e+00  -9.268185e-02  -3.154402e+00 
+   7.328555e-02  9.849239e-01  4.084698e+00 
+   -1.003448e-04  8.927596e-05  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 5.408e+02
+pre:    9.831183e-01  -4.801880e-02  2.307185e+01 
+   9.686531e-02  8.803770e-01  -4.922059e+01 
+   -3.150694e-04  2.864800e-05  1.000000e+00 
+post:    9.843068e-01  -4.795867e-02  2.318733e+01 
+   9.666808e-02  8.810365e-01  -4.926671e+01 
+   -3.005547e-04  4.320988e-05  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 5.135e+02
+Inliers[5,7] = 74 out of 143
+Inliers[5,7] = 74 out of 143
+Ratio[5,7] = 5.175e-01
+   9.843068e-01  -4.795867e-02  2.318733e+01 
+   9.666808e-02  8.810365e-01  -4.926671e+01 
+   -3.005547e-04  4.320988e-05  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 2.436e+02
+pre:    -8.229292e-01  -1.779458e-01  3.562896e+01 
+   4.343561e-01  -8.666889e-01  3.035227e+01 
+   5.425306e-06  -3.830082e-04  1.000000e+00 
+post:    -8.231258e-01  -1.784181e-01  3.560432e+01 
+   4.343931e-01  -8.664667e-01  3.039847e+01 
+   6.547023e-06  -3.822349e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 7.482e+01
+Inliers[5,8] = 51 out of 94
+Inliers[5,8] = 51 out of 94
+Ratio[5,8] = 5.426e-01
+   -8.231258e-01  -1.784181e-01  3.560432e+01 
+   4.343931e-01  -8.664667e-01  3.039847e+01 
+   6.547023e-06  -3.822349e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 1.684e+03
+pre:    8.562069e-01  9.768323e-02  2.839698e+01 
+   2.797502e-03  8.368225e-01  -4.640348e+01 
+   -3.651709e-04  -4.108971e-04  1.000000e+00 
+post:    8.553456e-01  9.599225e-02  2.851205e+01 
+   2.309733e-03  8.376102e-01  -4.645259e+01 
+   -3.624566e-04  -4.152334e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 1.430e+03
+Inliers[6,7] = 124 out of 267
+Inliers[6,7] = 124 out of 267
+Ratio[6,7] = 4.644e-01
+   8.553456e-01  9.599225e-02  2.851205e+01 
+   2.309733e-03  8.376102e-01  -4.645259e+01 
+   -3.624566e-04  -4.152334e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 2.935e+02
+pre:    -9.559328e-01  -4.214953e-01  7.261531e+01 
+   8.740735e-01  -2.497839e-01  -9.123061e+00 
+   8.459853e-04  8.683873e-04  1.000000e+00 
+post:    -9.555560e-01  -4.214177e-01  7.245876e+01 
+   8.787809e-01  -2.464771e-01  -9.760536e+00 
+   8.606618e-04  8.962012e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 1.747e+02
+Inliers[6,8] = 24 out of 42
+Inliers[6,8] = 24 out of 42
+Ratio[6,8] = 5.714e-01
+   -9.555560e-01  -4.214177e-01  7.245876e+01 
+   8.787809e-01  -2.464771e-01  -9.760536e+00 
+   8.606618e-04  8.962012e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (before) is 4.243e+02
+pre:    -9.956372e-01  -3.220149e-01  8.118935e+01 
+   6.655295e-01  -5.338930e-01  -1.346982e+01 
+   4.045728e-04  1.132376e-04  1.000000e+00 
+post:    -9.940803e-01  -3.215775e-01  8.104092e+01 
+   6.650236e-01  -5.328293e-01  -1.350082e+01 
+   4.018076e-04  1.197329e-04  1.000000e+00 
+[LeastSquaresFit] Residual error (after) is 3.032e+02
+Inliers[7,8] = 41 out of 105
+Inliers[7,8] = 41 out of 105
+Ratio[7,8] = 3.905e-01
+   -9.940803e-01  -3.215775e-01  8.104092e+01 
+   6.650236e-01  -5.328293e-01  -1.350082e+01 
+   4.018076e-04  1.197329e-04  1.000000e+00 
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 7 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 5 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 5 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 7 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 7 projections found
+Point with 7 projections found
+Point with 5 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 5 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 8 projections found
+Point with 9 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 5 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 6 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 5 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 5 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 4 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 4 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 3 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+Point with 2 projections found
+[SifterApp::ComputeTracks] Found 1225 points
+[SifterApp::ComputeTracks] Clearing match lists...
+[SifterApp::ComputeTracks] Creating consistent match lists...
+[SifterApp::ComputeTracks] Done!
+num_nbrs[0] = 8
+num_nbrs[1] = 8
+num_nbrs[2] = 8
+num_nbrs[3] = 8
+num_nbrs[4] = 8
+num_nbrs[5] = 8
+num_nbrs[6] = 8
+num_nbrs[7] = 8
+num_nbrs[8] = 8
+[WriteGeometricConstraints] Writing 36 transforms
+  Avg. proj error [0 projections] = -nan
+[SifterApp::BundleAdjust] Adjusting cameras 6 and 7 (score = 0.000)
+[BaseApp::SetTracks] Setting tracks for image 6...
+[BaseApp::SetTracks] Finished in 0.000s
+[BaseApp::SetTracks] Setting tracks for image 7...
+[BaseApp::SetTracks] Finished in 0.000s
+  Found 271 / 273 inliers (99.267%)
+[BundleAdjust] Adding initial matches...
+  Adding match 344 ==> 508 [0]
+ tri.error[0] = 0.149
+  Adding match 524 ==> 515 [1]
+ tri.error[1] = 0.075
+  Adding match 523 ==> 514 [2]
+ tri.error[2] = 0.075
+  Adding match 791 ==> 766 [3]
+ tri.error[3] = 0.031
+  Adding match 531 ==> 526 [4]
+ tri.error[4] = 0.018
+  Adding match 793 ==> 775 [5]
+ tri.error[5] = 0.028
+  Adding match 345 ==> 355 [6]
+ tri.error[6] = 0.306
+  Adding match 347 ==> 360 [7]
+ tri.error[7] = 0.032
+  Adding match 784 ==> 757 [8]
+ tri.error[8] = 0.042
+  Adding match 785 ==> 758 [9]
+ tri.error[9] = 0.042
+  Adding match 547 ==> 534 [10]
+ tri.error[10] = 0.022
+  Adding match 808 ==> 792 [11]
+ tri.error[11] = 0.028
+  Adding match 51 ==> 55 [12]
+ tri.error[12] = 0.122
+  Adding match 52 ==> 56 [13]
+ tri.error[13] = 0.122
+  Adding match 53 ==> 57 [14]
+ tri.error[14] = 0.122
+  Adding match 67 ==> 73 [15]
+ tri.error[15] = 0.311
+  Adding match 47 ==> 51 [16]
+ tri.error[16] = 0.411
+  Adding match 50 ==> 83 [17]
+ tri.error[17] = 0.066
+  Adding match 80 ==> 87 [18]
+ tri.error[18] = 0.024
+  Adding match 136 ==> 103 [19]
+ tri.error[19] = 0.352
+  Adding match 75 ==> 84 [20]
+ tri.error[20] = 0.086
+  Adding match 76 ==> 85 [21]
+ tri.error[21] = 0.086
+  Adding match 103 ==> 111 [22]
+ tri.error[22] = 0.499
+  Adding match 74 ==> 110 [23]
+ tri.error[23] = 0.274
+  Adding match 111 ==> 115 [24]
+ tri.error[24] = 0.187
+  Adding match 129 ==> 132 [25]
+ tri.error[25] = 0.115
+  Adding match 141 ==> 207 [26]
+ tri.error[26] = 0.000
+  Adding match 142 ==> 208 [27]
+ tri.error[27] = 0.000
+  Adding match 147 ==> 151 [28]
+ tri.error[28] = 0.152
+  Adding match 146 ==> 149 [29]
+ tri.error[29] = 0.212
+  Adding match 151 ==> 153 [30]
+ tri.error[30] = 0.117
+  Adding match 157 ==> 161 [31]
+ tri.error[31] = 0.303
+  Adding match 183 ==> 191 [32]
+ tri.error[32] = 0.030
+  Adding match 184 ==> 192 [33]
+ tri.error[33] = 0.030
+  Adding match 138 ==> 142 [34]
+ tri.error[34] = 0.211
+  Adding match 203 ==> 271 [35]
+ tri.error[35] = 0.061
+  Adding match 213 ==> 152 [36]
+ tri.error[36] = 0.492
+  Adding match 208 ==> 285 [37]
+ tri.error[37] = 0.226
+  Adding match 207 ==> 279 [38]
+ tri.error[38] = 0.433
+  Adding match 280 ==> 280 [39]
+ tri.error[39] = 0.038
+  Adding match 295 ==> 297 [40]
+ tri.error[40] = 0.119
+  Adding match 381 ==> 379 [41]
+ tri.error[41] = 0.266
+  Adding match 269 ==> 264 [42]
+ tri.error[42] = 0.471
+  Adding match 387 ==> 265 [43]
+ tri.error[43] = 0.055
+  Adding match 275 ==> 269 [44]
+ tri.error[44] = 0.004
+  Adding match 277 ==> 390 [45]
+ tri.error[45] = 0.092
+  Adding match 282 ==> 283 [46]
+ tri.error[46] = 0.127
+  Adding match 284 ==> 289 [47]
+ tri.error[47] = 0.055
+  Adding match 281 ==> 281 [48]
+ tri.error[48] = 0.171
+  Adding match 296 ==> 299 [49]
+ tri.error[49] = 0.290
+  Adding match 424 ==> 422 [50]
+ tri.error[50] = 0.335
+  Adding match 619 ==> 423 [51]
+ tri.error[51] = 0.169
+  Adding match 300 ==> 305 [52]
+ tri.error[52] = 0.187
+  Adding match 219 ==> 222 [53]
+ tri.error[53] = 0.499
+  Adding match 220 ==> 223 [54]
+ tri.error[54] = 0.499
+  Adding match 328 ==> 483 [55]
+ tri.error[55] = 0.030
+  Adding match 527 ==> 519 [56]
+ tri.error[56] = 0.018
+  Adding match 377 ==> 378 [57]
+ tri.error[57] = 0.090
+  Adding match 401 ==> 399 [58]
+ tri.error[58] = 0.142
+  Adding match 595 ==> 881 [59]
+ tri.error[59] = 0.198
+  Adding match 413 ==> 409 [60]
+ tri.error[60] = 0.060
+  Adding match 421 ==> 594 [61]
+ tri.error[61] = 0.011
+  Adding match 422 ==> 595 [62]
+ tri.error[62] = 0.011
+  Adding match 307 ==> 312 [63]
+ tri.error[63] = 0.411
+  Adding match 481 ==> 694 [64]
+ tri.error[64] = 0.081
+  Adding match 484 ==> 712 [65]
+ tri.error[65] = 0.042
+  Adding match 485 ==> 492 [66]
+ tri.error[66] = 0.100
+  Adding match 492 ==> 718 [67]
+ tri.error[67] = 0.132
+  Adding match 495 ==> 723 [68]
+ tri.error[68] = 0.096
+  Adding match 748 ==> 741 [69]
+ tri.error[69] = 0.086
+  Adding match 749 ==> 742 [70]
+ tri.error[70] = 0.086
+  Adding match 503 ==> 752 [71]
+ tri.error[71] = 0.164
+  Adding match 504 ==> 500 [72]
+ tri.error[72] = 0.037
+  Adding match 505 ==> 499 [73]
+ tri.error[73] = 0.037
+  Adding match 508 ==> 506 [74]
+ tri.error[74] = 0.075
+  Adding match 536 ==> 779 [75]
+ tri.error[75] = 0.060
+  Adding match 537 ==> 529 [76]
+ tri.error[76] = 0.074
+  Adding match 540 ==> 788 [77]
+ tri.error[77] = 0.067
+  Adding match 801 ==> 793 [78]
+ tri.error[78] = 0.082
+  Adding match 352 ==> 531 [79]
+ tri.error[79] = 0.100
+  Adding match 845 ==> 836 [80]
+ tri.error[80] = 0.026
+  Adding match 376 ==> 554 [81]
+ tri.error[81] = 0.210
+  Adding match 574 ==> 841 [82]
+ tri.error[82] = 0.000
+  Adding match 573 ==> 842 [83]
+ tri.error[83] = 0.000
+  Adding match 572 ==> 845 [84]
+ tri.error[84] = 0.120
+  Adding match 582 ==> 861 [85]
+ tri.error[85] = 0.073
+  Adding match 604 ==> 907 [86]
+ tri.error[86] = 0.002
+  Adding match 605 ==> 909 [87]
+ tri.error[87] = 0.015
+  Adding match 613 ==> 924 [88]
+ tri.error[88] = 0.027
+  Adding match 936 ==> 956 [89]
+ tri.error[89] = 0.094
+  Adding match 618 ==> 593 [90]
+ tri.error[90] = 0.114
+  Adding match 931 ==> 944 [91]
+ tri.error[91] = 0.258
+  Adding match 623 ==> 606 [92]
+ tri.error[92] = 0.184
+  Adding match 661 ==> 652 [93]
+ tri.error[93] = 0.034
+  Adding match 657 ==> 659 [94]
+ tri.error[94] = 0.048
+  Adding match 672 ==> 664 [95]
+ tri.error[95] = 0.046
+  Adding match 697 ==> 683 [96]
+ tri.error[96] = 0.026
+  Adding match 717 ==> 704 [97]
+ tri.error[97] = 0.044
+  Adding match 765 ==> 764 [98]
+ tri.error[98] = 0.118
+  Adding match 764 ==> 765 [99]
+ tri.error[99] = 0.043
+  Adding match 794 ==> 760 [100]
+ tri.error[100] = 0.047
+  Adding match 792 ==> 774 [101]
+ tri.error[101] = 0.028
+  Adding match 803 ==> 786 [102]
+ tri.error[102] = 0.193
+  Adding match 804 ==> 787 [103]
+ tri.error[103] = 0.135
+  Adding match 893 ==> 905 [104]
+ tri.error[104] = 0.152
+  Adding match 625 ==> 960 [105]
+ tri.error[105] = 0.149
+  Adding match 941 ==> 958 [106]
+ tri.error[106] = 0.191
+  Adding match 26 ==> 26 [107]
+ tri.error[107] = 0.139
+  Adding match 29 ==> 27 [108]
+ tri.error[108] = 0.787
+  Adding match 44 ==> 48 [109]
+ tri.error[109] = 0.457
+  Adding match 48 ==> 82 [110]
+ tri.error[110] = 0.283
+  Adding match 60 ==> 64 [111]
+ tri.error[111] = 0.781
+  Adding match 70 ==> 144 [112]
+ tri.error[112] = 0.362
+  Adding match 71 ==> 80 [113]
+ tri.error[113] = 0.635
+  Adding match 73 ==> 81 [114]
+ tri.error[114] = 0.338
+  Adding match 83 ==> 90 [115]
+ tri.error[115] = 0.290
+  Adding match 84 ==> 127 [116]
+ tri.error[116] = 0.633
+  Adding match 85 ==> 128 [117]
+ tri.error[117] = 0.633
+  Adding match 91 ==> 69 [118]
+ tri.error[118] = 1.195
+  Adding match 99 ==> 147 [119]
+ tri.error[119] = 1.037
+  Adding match 107 ==> 114 [120]
+ tri.error[120] = 0.115
+  Adding match 128 ==> 131 [121]
+ tri.error[121] = 0.115
+  Adding match 137 ==> 141 [122]
+ tri.error[122] = 0.204
+  Adding match 145 ==> 210 [123]
+ tri.error[123] = 0.175
+  Adding match 149 ==> 213 [124]
+ tri.error[124] = 0.308
+  Adding match 152 ==> 155 [125]
+ tri.error[125] = 0.001
+  Adding match 155 ==> 219 [126]
+ tri.error[126] = 0.199
+  Adding match 160 ==> 119 [127]
+ tri.error[127] = 0.345
+  Adding match 162 ==> 167 [128]
+ tri.error[128] = 0.252
+  Adding match 169 ==> 183 [129]
+ tri.error[129] = 0.226
+  Adding match 171 ==> 179 [130]
+ tri.error[130] = 0.094
+  Adding match 172 ==> 180 [131]
+ tri.error[131] = 0.094
+  Adding match 173 ==> 181 [132]
+ tri.error[132] = 0.242
+  Adding match 176 ==> 186 [133]
+ tri.error[133] = 0.150
+  Adding match 177 ==> 187 [134]
+ tri.error[134] = 0.175
+  Adding match 185 ==> 193 [135]
+ tri.error[135] = 0.104
+  Adding match 186 ==> 194 [136]
+ tri.error[136] = 0.104
+  Adding match 225 ==> 324 [137]
+ tri.error[137] = 0.294
+  Adding match 233 ==> 235 [138]
+ tri.error[138] = 0.039
+  Adding match 234 ==> 236 [139]
+ tri.error[139] = 0.039
+  Adding match 235 ==> 341 [140]
+ tri.error[140] = 0.143
+  Adding match 236 ==> 342 [141]
+ tri.error[141] = 0.143
+  Adding match 241 ==> 241 [142]
+ tri.error[142] = 0.147
+  Adding match 244 ==> 244 [143]
+ tri.error[143] = 0.135
+  Adding match 245 ==> 245 [144]
+ tri.error[144] = 0.221
+  Adding match 248 ==> 248 [145]
+ tri.error[145] = 0.084
+  Adding match 255 ==> 359 [146]
+ tri.error[146] = 0.132
+  Adding match 270 ==> 267 [147]
+ tri.error[147] = 0.324
+  Adding match 271 ==> 382 [148]
+ tri.error[148] = 0.021
+  Adding match 288 ==> 292 [149]
+ tri.error[149] = 0.496
+  Adding match 297 ==> 300 [150]
+ tri.error[150] = 0.018
+  Adding match 306 ==> 311 [151]
+ tri.error[151] = 0.411
+  Adding match 315 ==> 460 [152]
+ tri.error[152] = 0.058
+  Adding match 324 ==> 336 [153]
+ tri.error[153] = 0.249
+  Adding match 326 ==> 337 [154]
+ tri.error[154] = 0.176
+  Adding match 330 ==> 339 [155]
+ tri.error[155] = 0.066
+  Adding match 331 ==> 340 [156]
+ tri.error[156] = 0.066
+  Adding match 333 ==> 353 [157]
+ tri.error[157] = 0.199
+  Adding match 337 ==> 504 [158]
+ tri.error[158] = 0.245
+  Adding match 340 ==> 513 [159]
+ tri.error[159] = 0.106
+  Adding match 343 ==> 507 [160]
+ tri.error[160] = 0.149
+  Adding match 348 ==> 358 [161]
+ tri.error[161] = 0.142
+  Adding match 359 ==> 368 [162]
+ tri.error[162] = 0.218
+  Adding match 360 ==> 369 [163]
+ tri.error[163] = 0.218
+  Adding match 362 ==> 545 [164]
+ tri.error[164] = 0.041
+  Adding match 363 ==> 371 [165]
+ tri.error[165] = 0.452
+  Adding match 390 ==> 383 [166]
+ tri.error[166] = 0.364
+  Adding match 391 ==> 385 [167]
+ tri.error[167] = 0.046
+  Adding match 393 ==> 388 [168]
+ tri.error[168] = 0.000
+  Adding match 399 ==> 575 [169]
+ tri.error[169] = 0.244
+  Adding match 402 ==> 400 [170]
+ tri.error[170] = 0.197
+  Adding match 405 ==> 402 [171]
+ tri.error[171] = 0.048
+  Adding match 406 ==> 403 [172]
+ tri.error[172] = 0.048
+  Adding match 408 ==> 405 [173]
+ tri.error[173] = 0.075
+  Adding match 409 ==> 586 [174]
+ tri.error[174] = 0.058
+  Adding match 411 ==> 412 [175]
+ tri.error[175] = 0.467
+  Adding match 412 ==> 413 [176]
+ tri.error[176] = 0.467
+  Adding match 414 ==> 410 [177]
+ tri.error[177] = 0.060
+  Adding match 416 ==> 418 [178]
+ tri.error[178] = 0.058
+  Adding match 418 ==> 415 [179]
+ tri.error[179] = 0.045
+  Adding match 423 ==> 417 [180]
+ tri.error[180] = 0.199
+  Adding match 429 ==> 432 [181]
+ tri.error[181] = 0.101
+  Adding match 430 ==> 431 [182]
+ tri.error[182] = 0.276
+  Adding match 462 ==> 662 [183]
+ tri.error[183] = 0.076
+  Adding match 463 ==> 479 [184]
+ tri.error[184] = 0.014
+  Adding match 467 ==> 675 [185]
+ tri.error[185] = 0.137
+  Adding match 468 ==> 481 [186]
+ tri.error[186] = 0.024
+  Adding match 470 ==> 484 [187]
+ tri.error[187] = 0.102
+  Adding match 478 ==> 485 [188]
+ tri.error[188] = 0.114
+  Adding match 479 ==> 486 [189]
+ tri.error[189] = 0.114
+  Adding match 487 ==> 715 [190]
+ tri.error[190] = 0.075
+  Adding match 488 ==> 494 [191]
+ tri.error[191] = 0.201
+  Adding match 491 ==> 487 [192]
+ tri.error[192] = 0.199
+  Adding match 497 ==> 497 [193]
+ tri.error[193] = 0.112
+  Adding match 500 ==> 493 [194]
+ tri.error[194] = 0.036
+  Adding match 506 ==> 509 [195]
+ tri.error[195] = 0.244
+  Adding match 514 ==> 520 [196]
+ tri.error[196] = 0.049
+  Adding match 518 ==> 784 [197]
+ tri.error[197] = 0.020
+  Adding match 526 ==> 518 [198]
+ tri.error[198] = 0.193
+  Adding match 534 ==> 776 [199]
+ tri.error[199] = 0.045
+  Adding match 541 ==> 797 [200]
+ tri.error[200] = 0.369
+  Adding match 545 ==> 536 [201]
+ tri.error[201] = 0.004
+  Adding match 546 ==> 537 [202]
+ tri.error[202] = 0.004
+  Adding match 548 ==> 802 [203]
+ tri.error[203] = 0.111
+  Adding match 552 ==> 812 [204]
+ tri.error[204] = 0.035
+  Adding match 554 ==> 815 [205]
+ tri.error[205] = 0.007
+  Adding match 555 ==> 543 [206]
+ tri.error[206] = 0.012
+  Adding match 567 ==> 833 [207]
+ tri.error[207] = 0.015
+  Adding match 579 ==> 561 [208]
+ tri.error[208] = 0.094
+  Adding match 580 ==> 571 [209]
+ tri.error[209] = 0.138
+  Adding match 597 ==> 579 [210]
+ tri.error[210] = 0.022
+  Adding match 599 ==> 580 [211]
+ tri.error[211] = 0.018
+  Adding match 606 ==> 584 [212]
+ tri.error[212] = 0.165
+  Adding match 609 ==> 588 [213]
+ tri.error[213] = 0.011
+  Adding match 611 ==> 919 [214]
+ tri.error[214] = 0.307
+  Adding match 615 ==> 590 [215]
+ tri.error[215] = 0.028
+  Adding match 622 ==> 599 [216]
+ tri.error[216] = 0.136
+  Adding match 627 ==> 612 [217]
+ tri.error[217] = 0.228
+  Adding match 636 ==> 1042 [218]
+ tri.error[218] = 0.416
+  Adding match 647 ==> 648 [219]
+ tri.error[219] = 0.071
+  Adding match 648 ==> 650 [220]
+ tri.error[220] = 0.080
+  Adding match 649 ==> 670 [221]
+ tri.error[221] = 0.170
+  Adding match 654 ==> 649 [222]
+ tri.error[222] = 0.006
+  Adding match 658 ==> 661 [223]
+ tri.error[223] = 0.011
+  Adding match 667 ==> 656 [224]
+ tri.error[224] = 0.073
+  Adding match 675 ==> 653 [225]
+ tri.error[225] = 0.210
+  Adding match 679 ==> 676 [226]
+ tri.error[226] = 0.000
+  Adding match 683 ==> 679 [227]
+ tri.error[227] = 0.031
+  Adding match 695 ==> 684 [228]
+ tri.error[228] = 0.034
+  Adding match 696 ==> 682 [229]
+ tri.error[229] = 0.094
+  Adding match 700 ==> 690 [230]
+ tri.error[230] = 0.064
+  Adding match 702 ==> 697 [231]
+ tri.error[231] = 0.136
+  Adding match 705 ==> 689 [232]
+ tri.error[232] = 0.101
+  Adding match 706 ==> 695 [233]
+ tri.error[233] = 0.071
+  Adding match 707 ==> 696 [234]
+ tri.error[234] = 0.071
+  Adding match 712 ==> 693 [235]
+ tri.error[235] = 0.049
+  Adding match 713 ==> 707 [236]
+ tri.error[236] = 0.046
+  Adding match 714 ==> 708 [237]
+ tri.error[237] = 0.046
+  Adding match 724 ==> 725 [238]
+ tri.error[238] = 0.027
+  Adding match 731 ==> 729 [239]
+ tri.error[239] = 0.064
+  Adding match 732 ==> 730 [240]
+ tri.error[240] = 0.064
+  Adding match 742 ==> 744 [241]
+ tri.error[241] = 0.025
+  Adding match 743 ==> 745 [242]
+ tri.error[242] = 0.025
+  Adding match 744 ==> 735 [243]
+ tri.error[243] = 0.016
+  Adding match 745 ==> 736 [244]
+ tri.error[244] = 0.016
+  Adding match 747 ==> 740 [245]
+ tri.error[245] = 0.086
+  Adding match 756 ==> 756 [246]
+ tri.error[246] = 0.122
+  Adding match 767 ==> 739 [247]
+ tri.error[247] = 0.064
+  Adding match 770 ==> 768 [248]
+ tri.error[248] = 0.096
+  Adding match 772 ==> 771 [249]
+ tri.error[249] = 0.041
+  Adding match 773 ==> 772 [250]
+ tri.error[250] = 0.041
+  Adding match 780 ==> 782 [251]
+ tri.error[251] = 0.137
+  Adding match 820 ==> 798 [252]
+ tri.error[252] = 0.187
+  Adding match 829 ==> 811 [253]
+ tri.error[253] = 0.096
+  Adding match 887 ==> 884 [254]
+ tri.error[254] = 0.149
+  Adding match 892 ==> 903 [255]
+ tri.error[255] = 0.105
+  Adding match 897 ==> 898 [256]
+ tri.error[256] = 0.006
+  Adding match 898 ==> 904 [257]
+ tri.error[257] = 0.126
+  Adding match 912 ==> 921 [258]
+ tri.error[258] = 0.041
+  Adding match 926 ==> 947 [259]
+ tri.error[259] = 0.098
+  Adding match 928 ==> 939 [260]
+ tri.error[260] = 0.048
+  Adding match 935 ==> 955 [261]
+ tri.error[261] = 0.094
+  Adding match 940 ==> 950 [262]
+ tri.error[262] = 0.016
+  Adding match 965 ==> 1002 [263]
+ tri.error[263] = 0.165
+  Adding match 969 ==> 1018 [264]
+ tri.error[264] = 0.100
+  Adding match 970 ==> 1019 [265]
+ tri.error[265] = 0.100
+  Adding match 971 ==> 639 [266]
+ tri.error[266] = 0.083
+  Adding match 972 ==> 640 [267]
+ tri.error[267] = 0.083
+  Adding match 975 ==> 1011 [268]
+ tri.error[268] = 0.274
+  Adding match 976 ==> 1012 [269]
+ tri.error[269] = 0.274
+  Adding match 990 ==> 1035 [270]
+ tri.error[270] = 0.153
+  Adding match 999 ==> 1041 [271]
+ tri.error[271] = 0.000
+  Adding match 1000 ==> 1038 [272]
+ tri.error[272] = 0.141
+[SifterApp::DumpOutputFile] Wrote file in 0.010s
+initial motstr-SBA error 26.481 [0.0485]
+mean reprojection error 0.145189
+
+damping term   135354, gain ratio        1, errors   0.0485 / 0.0461578 = 1.05074
+pdp_eL2: 25.202, nvis: 546
+max_pct_change: 4.161e+09
+mean reprojection error 0.143747
+
+damping term  45117.9, gain ratio  1.00003, errors 0.0461578 / 0.0457774 = 1.00831
+pdp_eL2: 24.994, nvis: 546
+max_pct_change: 3.718e-01
+mean reprojection error 0.142636
+
+damping term  15039.3, gain ratio  1.00024, errors 0.0457774 / 0.0453716 = 1.00894
+pdp_eL2: 24.773, nvis: 546
+max_pct_change: 4.422e-01
+mean reprojection error 0.141244
+
+damping term   5013.1, gain ratio   1.0008, errors 0.0453716 / 0.0449293 = 1.00984
+pdp_eL2: 24.531, nvis: 546
+max_pct_change: 4.409e-01
+mean reprojection error 0.139373
+
+damping term  1671.03, gain ratio  1.00166, errors 0.0449293 / 0.0444421 = 1.01096
+pdp_eL2: 24.265, nvis: 546
+max_pct_change: 5.963e-01
+mean reprojection error 0.137345
+
+damping term  557.011, gain ratio  1.00189, errors 0.0444421 / 0.0439063 = 1.0122
+pdp_eL2: 23.973, nvis: 546
+max_pct_change: 3.724e-01
+mean reprojection error 0.134889
+
+damping term   185.67, gain ratio   1.0051, errors 0.0439063 / 0.0431733 = 1.01698
+pdp_eL2: 23.573, nvis: 546
+max_pct_change: 7.354e-01
+mean reprojection error 0.132551
+
+damping term  61.8901, gain ratio  1.02387, errors 0.0431733 / 0.042425 = 1.01764
+pdp_eL2: 23.164, nvis: 546
+max_pct_change: 6.745e-01
+mean reprojection error 0.130456
+
+damping term    20.63, gain ratio  1.08366, errors 0.042425 / 0.0417496 = 1.01618
+pdp_eL2: 22.795, nvis: 546
+max_pct_change: 5.032e-01
+mean reprojection error 0.12768
+
+damping term  6.87668, gain ratio  1.16311, errors 0.0417496 / 0.0409494 = 1.01954
+pdp_eL2: 22.358, nvis: 546
+max_pct_change: 4.252e-01
+mean reprojection error 0.124736
+
+damping term  2.29223, gain ratio  1.10866, errors 0.0409494 / 0.0401661 = 1.0195
+pdp_eL2: 21.931, nvis: 546
+max_pct_change: 6.217e-01
+mean reprojection error 0.122824
+
+damping term 0.764076, gain ratio 0.804272, errors 0.0401661 / 0.0395156 = 1.01646
+pdp_eL2: 21.576, nvis: 546
+max_pct_change: 1.011e+00
+mean reprojection error 0.122381
+
+damping term 0.591883, gain ratio 0.688577, errors 0.0395156 / 0.0391651 = 1.00895
+pdp_eL2: 21.384, nvis: 546
+max_pct_change: 1.129e+00
+mean reprojection error 0.122379
+
+damping term  0.56013, gain ratio 0.909437, errors 0.0391651 / 0.0389247 = 1.00618
+pdp_eL2: 21.253, nvis: 546
+max_pct_change: 7.473e-01
+mean reprojection error 0.122973
+
+damping term 0.252562, gain ratio 0.814082, errors 0.0389247 / 0.0387786 = 1.00377
+pdp_eL2: 21.173, nvis: 546
+max_pct_change: 4.834e-01
+mean reprojection error 0.123027
+
+damping term  0.18996, gain ratio  1.12659, errors 0.0387786 / 0.0386994 = 1.00205
+pdp_eL2: 21.130, nvis: 546
+max_pct_change: 3.062e-01
+mean reprojection error 0.123307
+
+damping term 0.0633199, gain ratio 0.469019, errors 0.0386994 / 0.038691 = 1.00022
+pdp_eL2: 21.125, nvis: 546
+max_pct_change: 1.464e-01
+mean reprojection error 0.123388
+
+damping term 0.063335, gain ratio   4.0701, errors 0.038691 / 0.0386661 = 1.00064
+pdp_eL2: 21.112, nvis: 546
+max_pct_change: 6.210e-02
+mean reprojection error 0.123442
+
+damping term 0.0211117, gain ratio  10.1502, errors 0.0386661 / 0.0386604 = 1.00015
+pdp_eL2: 21.109, nvis: 546
+max_pct_change: 1.382e-02
+[run_sfm] Number of iterations: 19
+info[6] = 8.000
+[RunSFM] run_sfm took 0.240s
+[RunSFM] Mean error cam 0[6] [273 pts]: 1.197e-01 [med: 7.158e-02, 8.000e+00]
+   E[5.157e-04--1.022e-01]: 177 [0.648]
+   E[1.022e-01--2.038e-01]: 52 [0.190]
+   E[2.038e-01--3.055e-01]: 17 [0.062]
+   E[3.055e-01--4.072e-01]: 15 [0.055]
+   E[4.072e-01--5.088e-01]: 5 [0.018]
+   E[5.088e-01--6.105e-01]: 1 [0.004]
+   E[6.105e-01--7.121e-01]: 3 [0.011]
+   E[7.121e-01--8.138e-01]: 0 [0.000]
+   E[8.138e-01--9.154e-01]: 1 [0.004]
+   E[9.154e-01--1.017e+00]: 2 [0.007]
+[RunSFM] Mean error cam 1[7] [273 pts]: 1.271e-01 [med: 7.491e-02, 8.000e+00]
+   E[3.780e-04--1.087e-01]: 175 [0.641]
+   E[1.087e-01--2.170e-01]: 54 [0.198]
+   E[2.170e-01--3.253e-01]: 19 [0.070]
+   E[3.253e-01--4.337e-01]: 14 [0.051]
+   E[4.337e-01--5.420e-01]: 3 [0.011]
+   E[5.420e-01--6.503e-01]: 4 [0.015]
+   E[6.503e-01--7.586e-01]: 1 [0.004]
+   E[7.586e-01--8.669e-01]: 0 [0.000]
+   E[8.669e-01--9.753e-01]: 1 [0.004]
+   E[9.753e-01--1.084e+00]: 2 [0.007]
+[RunSFM] outlier removal took 0.000s
+[RunSFM] Removing 0 outliers
+  focal lengths: 650.930, 655.517
+[SifterApp::DumpOutputFile] Wrote file in 0.010s
+  existing_matches[0] = 5
+  score[0]   = 5.000
+  existing_matches[1] = 4
+  score[1]   = 4.000
+  existing_matches[2] = 2
+  score[2]   = 2.000
+  existing_matches[3] = 4
+  score[3]   = 4.000
+  existing_matches[4] = 12
+  score[4]   = 12.000
+  existing_matches[5] = 107
+  score[5]   = 107.000
+  existing_matches[8] = 56
+  score[8]   = 56.000
+Error: parent not found
+[SifterApp::BundleAdjust] max_matches = 107
+[SifterApp::BundleAdjustFast] Registering 1 images
+[SifterApp::BundleAdjustFast] Adjusting camera 5
+[SifterApp::BundleAdjust[0]] Adjusting camera 5 (parent = -1)
+[BaseApp::SetTracks] Setting tracks for image 5...
+[BaseApp::SetTracks] Finished in 0.000s
+[BundleInitializeImage] Connecting existing matches...
+[BundleInitializeImage] Initializing camera...
+[find_projection_3x4_ransac] num_inliers = 107 (out of 107)
+[find_projection_3x4_ransac] error = 1.072
+[find_projection_3x4_ransac] Reverting to old solution
+Best matrix (pre-opt):
+   -8.722306e+03  -8.014599e+02  -2.188134e+03  -1.246694e+04 
+   7.159208e+02  -8.905787e+03  5.664499e+02  3.663353e+03 
+   3.261729e+00  -2.161075e-01  -1.299902e+01  1.000000e+00 
+Old error: 3.521e+02
+Best matrix (post-opt):
+   -2.121526e+04  -1.866715e+03  -5.344077e+03  -3.045743e+04 
+   1.720255e+03  -2.170631e+04  1.213394e+03  8.102658e+03 
+   7.627082e+00  -7.447498e-01  -3.206494e+01  1.000000e+00 
+New error: 6.538e-01
+[FindAndVerifyCamera] Estimated intrinsics:
+   6.659403e+02  -3.288051e+00  1.006290e+01 
+   0.000000e+00  6.614358e+02  -8.851999e+00 
+   0.000000e+00  0.000000e+00  1.000000e+00 
+[FindAndVerifyCamera] Estimated extrinsics:
+   9.694104e-01  8.960072e-02  2.285064e-01 
+   -8.198446e-02  9.957215e-01  -4.262804e-02 
+   -2.313482e-01  2.259010e-02  9.726087e-01 
+   1.385907e+00  -3.719818e-01  -3.033246e-02 
+[FindAndVerifyCamera] Checking consistency...
+[BundleInitializeImage] Camera has initial focal length of 660.803
+[BundleInitializeImage] Adjusting...
+  Round[0]: RMS error = 12.92767887 [12.88563582]
+  Round[1]: RMS error = 1.01947726 [0.92990932]
+  Round[2]: RMS error = 1.01684881 [0.92432776]
+  Round[3]: RMS error = 1.01684880 [0.92431746]
+  Round[4]: RMS error = 1.01684880 [0.92431748]
+Sum of squares tolerance reached
+[RefineCameraParameters] Calling with 107 points
+[camera_refine] Constraining focal length to 660.803 (weight: 0.011)
+  Round[0]: RMS error = 1.01684880 [0.92431748], f = 660.803; 0.000e+00 0.000e+00
+  Round[0]: df = 0.000
+  Round[1]: RMS error = 0.90020354 [0.78373410], f = 663.127; 3.439e-02 5.593e-02
+  Round[1]: df = -2.324
+  Round[2]: RMS error = 0.89993893 [0.78293772], f = 663.051; 3.524e-02 5.711e-02
+  Round[2]: df = -2.248
+  Round[3]: RMS error = 0.89993878 [0.78294184], f = 663.050; 3.524e-02 5.712e-02
+  Round[3]: df = -2.247
+  Round[4]: RMS error = 0.89993870 [0.78294107], f = 663.050; 3.524e-02 5.712e-02
+  Round[4]: df = -2.247
+  Round[5]: RMS error = 0.89993870 [0.78294107], f = 663.050; 3.524e-02 5.712e-02
+  Round[5]: df = -2.247
+Sum of squares tolerance reached
+[RefineCameraParameters] Error: 0.783
+[RefineCameraParameters] Threshold = 8.000
+   E[8.134e-02--3.423e-01]: 14 [0.131]
+   E[3.423e-01--6.033e-01]: 27 [0.252]
+   E[6.033e-01--8.643e-01]: 29 [0.271]
+   E[8.643e-01--1.125e+00]: 16 [0.150]
+   E[1.125e+00--1.386e+00]: 13 [0.121]
+   E[1.386e+00--1.647e+00]: 3 [0.028]
+   E[1.647e+00--1.908e+00]: 1 [0.009]
+   E[1.908e+00--2.169e+00]: 3 [0.028]
+   E[2.169e+00--2.430e+00]: 0 [0.000]
+   E[2.430e+00--2.691e+00]: 1 [0.009]
+[RefineCameraParameters] Exiting after 1 rounds with 107 / 107 points
+[BundleInitializeImage] Initializing took 0.600s
+[SifterApp::BundleAdjust] Adding new matches
+[AddAllNewPoints] Added 112 new points
+[AddAllNewPoints] Ill-conditioned tracks: 0
+[AddAllNewPoints] Bad reprojections: 0
+[AddAllNewPoints] Failed cheirality checks: 0
+[SifterApp::BundleAdjust] Number of points = 385
+initial motstr-SBA error 462.69 [0.527582]
+mean reprojection error 0.3344
+
+damping term   160137, gain ratio 0.998498, errors 0.527582 / 0.359548 = 1.46735
+pdp_eL2: 315.323, nvis: 877
+max_pct_change: 1.583e+02
+mean reprojection error 0.334044
+
+damping term    53379, gain ratio 0.999668, errors 0.359548 / 0.302858 = 1.18718
+pdp_eL2: 265.606, nvis: 877
+max_pct_change: 3.384e+02
+mean reprojection error 0.327881
+
+damping term    17793, gain ratio  1.00057, errors 0.302858 / 0.256955 = 1.17864
+pdp_eL2: 225.350, nvis: 877
+max_pct_change: 8.844e+01
+mean reprojection error 0.316344
+
+damping term     5931, gain ratio  1.00172, errors 0.256955 / 0.220353 = 1.1661
+pdp_eL2: 193.250, nvis: 877
+max_pct_change: 4.392e+01
+mean reprojection error 0.301436
+
+damping term     1977, gain ratio  1.00338, errors 0.220353 / 0.186924 = 1.17884
+pdp_eL2: 163.932, nvis: 877
+max_pct_change: 8.778e+01
+mean reprojection error 0.278408
+
+damping term      659, gain ratio  1.00291, errors 0.186924 / 0.155311 = 1.20354
+pdp_eL2: 136.208, nvis: 877
+max_pct_change: 1.346e+02
+mean reprojection error 0.250774
+
+damping term  219.667, gain ratio  1.00274, errors 0.155311 / 0.130297 = 1.19198
+pdp_eL2: 114.270, nvis: 877
+max_pct_change: 3.045e+02
+mean reprojection error 0.229274
+
+damping term  73.2223, gain ratio  1.01194, errors 0.130297 / 0.112622 = 1.15694
+pdp_eL2: 98.770, nvis: 877
+max_pct_change: 9.952e+01
+mean reprojection error 0.207332
+
+damping term  24.4074, gain ratio  1.01923, errors 0.112622 / 0.0940037 = 1.19806
+pdp_eL2: 82.441, nvis: 877
+max_pct_change: 1.987e+02
+mean reprojection error 0.18219
+
+damping term  8.13581, gain ratio   1.0044, errors 0.0940037 / 0.0742449 = 1.26613
+pdp_eL2: 65.113, nvis: 877
+max_pct_change: 2.201e+01
+mean reprojection error 0.161003
+
+damping term  2.71194, gain ratio 0.950818, errors 0.0742449 / 0.0618937 = 1.19956
+pdp_eL2: 54.281, nvis: 877
+max_pct_change: 1.516e+01
+mean reprojection error 0.151587
+
+damping term 0.903978, gain ratio 0.785326, errors 0.0618937 / 0.058584 = 1.05649
+pdp_eL2: 51.378, nvis: 877
+max_pct_change: 2.748e+01
+mean reprojection error 0.150258
+
+damping term 0.735993, gain ratio -0.16591, errors 0.058584 / 0.058678 = 0.998397
+pdp_eL2: 51.461, nvis: 877
+mean reprojection error 0.150202
+
+damping term  1.47199, gain ratio -0.33611, errors 0.058584 / 0.0587441 = 0.997273
+pdp_eL2: 51.519, nvis: 877
+mean reprojection error 0.150512
+
+damping term  5.88794, gain ratio  -1.3011, errors 0.058584 / 0.0589717 = 0.993424
+pdp_eL2: 51.718, nvis: 877
+mean reprojection error 0.150787
+
+damping term  47.1035, gain ratio  -3.7302, errors 0.058584 / 0.0591619 = 0.99023
+pdp_eL2: 51.885, nvis: 877
+mean reprojection error 0.150825
+
+damping term  753.656, gain ratio -4.85841, errors 0.058584 / 0.0591921 = 0.989727
+pdp_eL2: 51.911, nvis: 877
+mean reprojection error 0.150878
+
+damping term    24117, gain ratio -5.63776, errors 0.058584 / 0.0592059 = 0.989495
+pdp_eL2: 51.924, nvis: 877
+mean reprojection error 0.150947
+
+damping term 1.54349e+06, gain ratio -7.57134, errors 0.058584 / 0.059231 = 0.989076
+pdp_eL2: 51.946, nvis: 877
+mean reprojection error 0.151319
+
+damping term 1.97567e+08, gain ratio -20.6781, errors 0.058584 / 0.0592832 = 0.988205
+pdp_eL2: 51.991, nvis: 877
+mean reprojection error 0.151585
+
+damping term 5.0577e+10, gain ratio -2579.98, errors 0.058584 / 0.0593168 = 0.987646
+pdp_eL2: 52.021, nvis: 877
+[run_sfm] Number of iterations: 13
+info[6] = 2.000
+[RunSFM] run_sfm took 0.320s
+[RunSFM] Mean error cam 0[6] [337 pts]: 1.474e-01 [med: 8.526e-02, 8.000e+00]
+   E[3.002e-03--1.354e-01]: 212 [0.629]
+   E[1.354e-01--2.678e-01]: 78 [0.231]
+   E[2.678e-01--4.002e-01]: 22 [0.065]
+   E[4.002e-01--5.327e-01]: 13 [0.039]
+   E[5.327e-01--6.651e-01]: 3 [0.009]
+   E[6.651e-01--7.975e-01]: 3 [0.009]
+   E[7.975e-01--9.299e-01]: 1 [0.003]
+   E[9.299e-01--1.062e+00]: 4 [0.012]
+   E[1.062e+00--1.195e+00]: 0 [0.000]
+   E[1.195e+00--1.327e+00]: 1 [0.003]
+[RunSFM] Mean error cam 1[7] [321 pts]: 1.521e-01 [med: 9.736e-02, 8.000e+00]
+   E[2.780e-03--1.102e-01]: 173 [0.539]
+   E[1.102e-01--2.175e-01]: 81 [0.252]
+   E[2.175e-01--3.249e-01]: 35 [0.109]
+   E[3.249e-01--4.323e-01]: 16 [0.050]
+   E[4.323e-01--5.396e-01]: 5 [0.016]
+   E[5.396e-01--6.470e-01]: 3 [0.009]
+   E[6.470e-01--7.544e-01]: 2 [0.006]
+   E[7.544e-01--8.618e-01]: 2 [0.006]
+   E[8.618e-01--9.691e-01]: 0 [0.000]
+   E[9.691e-01--1.077e+00]: 4 [0.012]
+[RunSFM] Mean error cam 2[5] [219 pts]: 1.572e-01 [med: 1.095e-01, 8.000e+00]
+   E[4.042e-03--1.522e-01]: 143 [0.653]
+   E[1.522e-01--3.003e-01]: 53 [0.242]
+   E[3.003e-01--4.484e-01]: 10 [0.046]
+   E[4.484e-01--5.965e-01]: 5 [0.023]
+   E[5.965e-01--7.447e-01]: 3 [0.014]
+   E[7.447e-01--8.928e-01]: 1 [0.005]
+   E[8.928e-01--1.041e+00]: 3 [0.014]
+   E[1.041e+00--1.189e+00]: 0 [0.000]
+   E[1.189e+00--1.337e+00]: 0 [0.000]
+   E[1.337e+00--1.485e+00]: 1 [0.005]
+[RunSFM] outlier removal took 0.000s
+[RunSFM] Removing 0 outliers
+[RemoveBadPointsAndCameras] Pruned 0 points
+  focal lengths:
+   [000] 695.387 (660.803) ./et006.jpg 6; -1.118e-01 -2.783e-02
+   [001] 700.334 (660.803) ./et007.jpg 7; -1.252e-01 2.528e-02
+   [002] 694.834 (660.803) ./et005.jpg 5; -1.154e-01 -3.663e-02
+[SifterApp::DumpOutputFile] Wrote file in 0.020s
+  existing_matches[0] = 5
+  score[0]   = 5.000
+  existing_matches[1] = 4
+  score[1]   = 4.000
+  existing_matches[2] = 2
+  score[2]   = 2.000
+  existing_matches[3] = 4
+  score[3]   = 4.000
+  existing_matches[4] = 18
+  score[4]   = 18.000
+  existing_matches[8] = 72
+  score[8]   = 72.000
+Error: parent not found
+[SifterApp::BundleAdjust] max_matches = 72
+[SifterApp::BundleAdjustFast] Registering 1 images
+[SifterApp::BundleAdjustFast] Adjusting camera 8
+[SifterApp::BundleAdjust[1]] Adjusting camera 8 (parent = -1)
+[BaseApp::SetTracks] Setting tracks for image 8...
+[BaseApp::SetTracks] Finished in 0.000s
+[BundleInitializeImage] Connecting existing matches...
+[BundleInitializeImage] Initializing camera...
+[find_projection_3x4_ransac] num_inliers = 72 (out of 72)
+[find_projection_3x4_ransac] error = 0.943
+Best matrix (pre-opt):
+   4.637514e+02  1.719275e+02  8.641777e+01  2.129691e+02 
+   -1.413289e+02  4.613400e+02  -1.455902e+02  -1.280460e+03 
+   1.863675e-01  -2.089430e-01  -6.288198e-01  1.000000e+00 
+Old error: 3.482e+02
+Best matrix (post-opt):
+   5.236775e+02  1.930542e+02  9.891687e+01  2.493358e+02 
+   -1.591212e+02  5.211450e+02  -1.626308e+02  -1.436419e+03 
+   2.153399e-01  -2.132414e-01  -7.328756e-01  1.000000e+00 
+New error: 7.967e-01
+[FindAndVerifyCamera] Estimated intrinsics:
+   7.147246e+02  2.569794e+00  -1.418618e+00 
+   0.000000e+00  7.158152e+02  -4.166745e+01 
+   0.000000e+00  0.000000e+00  1.000000e+00 
+[FindAndVerifyCamera] Estimated extrinsics:
+   -9.253734e-01  -3.368124e-01  -1.739006e-01 
+   2.644918e-01  -9.023631e-01  3.402717e-01 
+   -2.715292e-01  2.688832e-01  9.241070e-01 
+   -4.512204e-01  2.456902e+00  -1.260933e+00 
+[FindAndVerifyCamera] Checking consistency...
+[BundleInitializeImage] Camera has initial focal length of 660.803
+[BundleInitializeImage] Adjusting...
+  Round[0]: RMS error = 48.71587099 [48.38756661]
+  Round[1]: RMS error = 1.69299300 [1.39306682]
+  Round[2]: RMS error = 1.16281508 [0.94064969]
+  Round[3]: RMS error = 1.16274565 [0.94058844]
+  Round[4]: RMS error = 1.16274565 [0.94058860]
+  Round[5]: RMS error = 1.16274565 [0.94058861]
+Sum of squares tolerance reached
+[RefineCameraParameters] Calling with 72 points
+[camera_refine] Constraining focal length to 660.803 (weight: 0.007)
+  Round[0]: RMS error = 1.16274565 [0.94058861], f = 660.803; 0.000e+00 0.000e+00
+  Round[0]: df = 0.000
+  Round[1]: RMS error = 0.95473575 [0.78544283], f = 704.588; -1.069e-01 -1.447e-03
+  Round[1]: df = -43.785
+  Round[2]: RMS error = 0.80391548 [0.58769437], f = 706.490; -1.190e-01 2.750e-03
+  Round[2]: df = -45.687
+  Round[3]: RMS error = 0.80392542 [0.58769564], f = 706.459; -1.187e-01 1.766e-03
+  Round[3]: df = -45.655
+  Round[4]: RMS error = 0.80392542 [0.58769564], f = 706.459; -1.187e-01 1.766e-03
+  Round[4]: df = -45.655
+Sum of squares tolerance reached
+[RefineCameraParameters] Error: 0.588
+[RefineCameraParameters] Threshold = 8.000
+   E[4.965e-02--3.450e-01]: 29 [0.403]
+   E[3.450e-01--6.403e-01]: 24 [0.333]
+   E[6.403e-01--9.356e-01]: 8 [0.111]
+   E[9.356e-01--1.231e+00]: 3 [0.042]
+   E[1.231e+00--1.526e+00]: 3 [0.042]
+   E[1.526e+00--1.821e+00]: 2 [0.028]
+   E[1.821e+00--2.117e+00]: 1 [0.014]
+   E[2.117e+00--2.412e+00]: 0 [0.000]
+   E[2.412e+00--2.707e+00]: 1 [0.014]
+   E[2.707e+00--3.003e+00]: 1 [0.014]
+[RefineCameraParameters] Exiting after 1 rounds with 72 / 72 points
+[BundleInitializeImage] Initializing took 0.560s
+[SifterApp::BundleAdjust] Adding new matches
+[AddAllNewPoints] Added 107 new points
+[AddAllNewPoints] Ill-conditioned tracks: 0
+[AddAllNewPoints] Bad reprojections: 0
+[AddAllNewPoints] Failed cheirality checks: 0
+[SifterApp::BundleAdjust] Number of points = 492
+initial motstr-SBA error 655.491 [0.563621]
+mean reprojection error 0.349108
+
+damping term   190590, gain ratio  1.00073, errors 0.563621 /  0.30336 = 1.85792
+pdp_eL2: 352.808, nvis: 1163
+max_pct_change: 8.184e+03
+mean reprojection error 0.323893
+
+damping term    63530, gain ratio 0.999329, errors  0.30336 / 0.245303 = 1.23668
+pdp_eL2: 285.287, nvis: 1163
+max_pct_change: 1.297e+02
+mean reprojection error 0.288934
+
+damping term  21176.7, gain ratio 0.999731, errors 0.245303 / 0.185369 = 1.32332
+pdp_eL2: 215.584, nvis: 1163
+max_pct_change: 1.199e+04
+mean reprojection error 0.258226
+
+damping term  7058.89, gain ratio 0.999794, errors 0.185369 / 0.144236 = 1.28518
+pdp_eL2: 167.746, nvis: 1163
+max_pct_change: 5.126e+01
+mean reprojection error 0.238965
+
+damping term  2352.96, gain ratio  1.00028, errors 0.144236 / 0.122515 = 1.1773
+pdp_eL2: 142.484, nvis: 1163
+max_pct_change: 1.382e+01
+mean reprojection error 0.222955
+
+damping term  784.321, gain ratio  1.00276, errors 0.122515 / 0.108411 = 1.13009
+pdp_eL2: 126.082, nvis: 1163
+max_pct_change: 9.888e+00
+mean reprojection error 0.20706
+
+damping term   261.44, gain ratio  1.00688, errors 0.108411 / 0.0958422 = 1.13114
+pdp_eL2: 111.464, nvis: 1163
+max_pct_change: 1.167e+01
+mean reprojection error 0.191262
+
+damping term  87.1468, gain ratio   1.0082, errors 0.0958422 / 0.0843947 = 1.13564
+pdp_eL2: 98.151, nvis: 1163
+max_pct_change: 1.059e+01
+mean reprojection error 0.1774
+
+damping term  29.0489, gain ratio 0.995147, errors 0.0843947 / 0.0749384 = 1.12619
+pdp_eL2: 87.153, nvis: 1163
+max_pct_change: 5.317e+01
+mean reprojection error 0.167637
+
+damping term  9.68298, gain ratio 0.972038, errors 0.0749384 / 0.0693357 = 1.0808
+pdp_eL2: 80.637, nvis: 1163
+max_pct_change: 1.244e+01
+mean reprojection error 0.164297
+
+damping term  3.22766, gain ratio 0.985654, errors 0.0693357 / 0.0675443 = 1.02652
+pdp_eL2: 78.554, nvis: 1163
+max_pct_change: 1.912e+01
+mean reprojection error 0.163907
+
+damping term  1.07589, gain ratio 0.825329, errors 0.0675443 / 0.0672994 = 1.00364
+pdp_eL2: 78.269, nvis: 1163
+max_pct_change: 3.130e+00
+mean reprojection error 0.163601
+
+damping term 0.779522, gain ratio 0.0787979, errors 0.0672994 / 0.0672905 = 1.00013
+pdp_eL2: 78.259, nvis: 1163
+max_pct_change: 2.963e-01
+mean reprojection error 0.16338
+
+damping term  1.24553, gain ratio 0.612063, errors 0.0672905 / 0.0672547 = 1.00053
+pdp_eL2: 78.217, nvis: 1163
+max_pct_change: 1.501e-01
+mean reprojection error 0.163257
+
+damping term   1.2315, gain ratio 0.775462, errors 0.0672547 / 0.0672309 = 1.00035
+pdp_eL2: 78.190, nvis: 1163
+max_pct_change: 1.168e-01
+mean reprojection error 0.163135
+
+damping term  1.02558, gain ratio 0.933438, errors 0.0672309 / 0.0672057 = 1.00037
+pdp_eL2: 78.160, nvis: 1163
+max_pct_change: 1.329e-01
+mean reprojection error 0.162969
+
+damping term  0.35748, gain ratio 0.618475, errors 0.0672057 / 0.0671806 = 1.00037
+pdp_eL2: 78.131, nvis: 1163
+max_pct_change: 1.794e-01
+mean reprojection error 0.162772
+
+damping term 0.352725, gain ratio  1.03209, errors 0.0671806 / 0.0671419 = 1.00058
+pdp_eL2: 78.086, nvis: 1163
+max_pct_change: 1.035e-01
+mean reprojection error 0.162621
+
+damping term 0.117575, gain ratio 0.450601, errors 0.0671419 / 0.0671339 = 1.00012
+pdp_eL2: 78.077, nvis: 1163
+max_pct_change: 1.180e-01
+mean reprojection error 0.162528
+
+damping term 0.117688, gain ratio 0.804294, errors 0.0671339 / 0.0671234 = 1.00016
+pdp_eL2: 78.065, nvis: 1163
+max_pct_change: 1.213e-01
+mean reprojection error 0.162499
+
+damping term 0.0911602, gain ratio -7.77473, errors 0.0671234 / 0.0671296 = 0.999907
+pdp_eL2: 78.072, nvis: 1163
+mean reprojection error 0.162508
+
+damping term  0.18232, gain ratio -9.68578, errors 0.0671234 / 0.0671304 = 0.999896
+pdp_eL2: 78.073, nvis: 1163
+mean reprojection error 0.162523
+
+damping term 0.729282, gain ratio -16.9522, errors 0.0671234 / 0.067132 = 0.999872
+pdp_eL2: 78.075, nvis: 1163
+mean reprojection error 0.162531
+
+damping term  5.83425, gain ratio -29.4411, errors 0.0671234 / 0.0671338 = 0.999845
+pdp_eL2: 78.077, nvis: 1163
+mean reprojection error 0.162533
+
+damping term  93.3481, gain ratio -37.7831, errors 0.0671234 / 0.0671357 = 0.999817
+pdp_eL2: 78.079, nvis: 1163
+mean reprojection error 0.162534
+
+damping term  2987.14, gain ratio -40.3938, errors 0.0671234 / 0.0671364 = 0.999807
+pdp_eL2: 78.080, nvis: 1163
+mean reprojection error 0.162533
+
+damping term   191177, gain ratio -43.6497, errors 0.0671234 / 0.0671364 = 0.999806
+pdp_eL2: 78.080, nvis: 1163
+mean reprojection error 0.162526
+
+damping term 2.44706e+07, gain ratio -55.8917, errors 0.0671234 / 0.0671365 = 0.999805
+pdp_eL2: 78.080, nvis: 1163
+mean reprojection error 0.162528
+
+damping term 6.26448e+09, gain ratio -1332.17, errors 0.0671234 / 0.0671367 = 0.999802
+pdp_eL2: 78.080, nvis: 1163
+[run_sfm] Number of iterations: 21
+info[6] = 2.000
+[RunSFM] run_sfm took 0.650s
+[RunSFM] Mean error cam 0[6] [342 pts]: 1.626e-01 [med: 1.040e-01, 8.000e+00]
+   E[8.799e-04--1.329e-01]: 210 [0.614]
+   E[1.329e-01--2.649e-01]: 71 [0.208]
+   E[2.649e-01--3.969e-01]: 28 [0.082]
+   E[3.969e-01--5.289e-01]: 16 [0.047]
+   E[5.289e-01--6.609e-01]: 6 [0.018]
+   E[6.609e-01--7.930e-01]: 4 [0.012]
+   E[7.930e-01--9.250e-01]: 2 [0.006]
+   E[9.250e-01--1.057e+00]: 3 [0.009]
+   E[1.057e+00--1.189e+00]: 0 [0.000]
+   E[1.189e+00--1.321e+00]: 2 [0.006]
+[RunSFM] Mean error cam 1[7] [369 pts]: 1.539e-01 [med: 1.047e-01, 8.000e+00]
+   E[2.230e-03--1.096e-01]: 195 [0.528]
+   E[1.096e-01--2.170e-01]: 90 [0.244]
+   E[2.170e-01--3.243e-01]: 44 [0.119]
+   E[3.243e-01--4.317e-01]: 20 [0.054]
+   E[4.317e-01--5.390e-01]: 7 [0.019]
+   E[5.390e-01--6.464e-01]: 3 [0.008]
+   E[6.464e-01--7.538e-01]: 3 [0.008]
+   E[7.538e-01--8.611e-01]: 3 [0.008]
+   E[8.611e-01--9.685e-01]: 0 [0.000]
+   E[9.685e-01--1.076e+00]: 4 [0.011]
+[RunSFM] Mean error cam 2[5] [273 pts]: 1.635e-01 [med: 1.191e-01, 8.000e+00]
+   E[1.124e-03--1.468e-01]: 181 [0.663]
+   E[1.468e-01--2.924e-01]: 54 [0.198]
+   E[2.924e-01--4.381e-01]: 19 [0.070]
+   E[4.381e-01--5.837e-01]: 10 [0.037]
+   E[5.837e-01--7.293e-01]: 2 [0.007]
+   E[7.293e-01--8.750e-01]: 3 [0.011]
+   E[8.750e-01--1.021e+00]: 3 [0.011]
+   E[1.021e+00--1.166e+00]: 0 [0.000]
+   E[1.166e+00--1.312e+00]: 0 [0.000]
+   E[1.312e+00--1.458e+00]: 1 [0.004]
+[RunSFM] Mean error cam 3[8] [179 pts]: 1.786e-01 [med: 1.204e-01, 8.000e+00]
+   E[1.613e-03--1.158e-01]: 89 [0.497]
+   E[1.158e-01--2.300e-01]: 50 [0.279]
+   E[2.300e-01--3.443e-01]: 18 [0.101]
+   E[3.443e-01--4.585e-01]: 6 [0.034]
+   E[4.585e-01--5.727e-01]: 6 [0.034]
+   E[5.727e-01--6.869e-01]: 1 [0.006]
+   E[6.869e-01--8.011e-01]: 5 [0.028]
+   E[8.011e-01--9.153e-01]: 2 [0.011]
+   E[9.153e-01--1.030e+00]: 0 [0.000]
+   E[1.030e+00--1.144e+00]: 2 [0.011]
+[RunSFM] outlier removal took 0.010s
+[RunSFM] Removing 0 outliers
+[RemoveBadPointsAndCameras] Pruned 0 points
+  focal lengths:
+   [000] 681.482 (660.803) ./et006.jpg 6; -1.238e-01 -4.217e-02
+   [001] 682.605 (660.803) ./et007.jpg 7; -1.411e-01 2.513e-02
+   [002] 682.701 (660.803) ./et005.jpg 5; -1.432e-01 -2.596e-02
+   [003] 680.439 (660.803) ./et008.jpg 8; -1.360e-01 -2.080e-02
+[SifterApp::DumpOutputFile] Wrote file in 0.020s
+  existing_matches[0] = 8
+  score[0]   = 8.000
+  existing_matches[1] = 8
+  score[1]   = 8.000
+  existing_matches[2] = 5
+  score[2]   = 5.000
+  existing_matches[3] = 5
+  score[3]   = 5.000
+  existing_matches[4] = 32
+  score[4]   = 32.000
+Error: parent not found
+[SifterApp::BundleAdjust] max_matches = 32
+[SifterApp::BundleAdjustFast] Registering 1 images
+[SifterApp::BundleAdjustFast] Adjusting camera 4
+[SifterApp::BundleAdjust[2]] Adjusting camera 4 (parent = -1)
+[BaseApp::SetTracks] Setting tracks for image 4...
+[BaseApp::SetTracks] Finished in 0.000s
+[BundleInitializeImage] Connecting existing matches...
+[BundleInitializeImage] Initializing camera...
+[find_projection_3x4_ransac] num_inliers = 32 (out of 32)
+[find_projection_3x4_ransac] error = 1.218
+[find_projection_3x4_ransac] Reverting to old solution
+Best matrix (pre-opt):
+   -2.373998e+02  1.036345e+02  -6.142321e+01  -6.132319e+02 
+   -2.345464e+02  -2.318396e+02  -1.721554e+02  -5.196983e+02 
+   1.115536e-01  3.830209e-01  -3.476092e-01  1.000000e+00 
+Old error: 5.719e+02
+Best matrix (post-opt):
+   -3.049537e+02  1.101458e+02  -2.918063e+01  -2.755417e+02 
+   -2.236945e+02  -2.304909e+02  -1.824742e+02  -6.022022e+02 
+   6.757549e-02  3.737125e-01  -3.716866e-01  1.000000e+00 
+New error: 7.362e-01
+[FindAndVerifyCamera] Estimated intrinsics:
+   5.394784e+02  2.681607e+02  1.112037e+02 
+   0.000000e+00  6.850138e+02  -1.183885e+02 
+   0.000000e+00  0.000000e+00  1.000000e+00 
+[FindAndVerifyCamera] Estimated extrinsics:
+   7.954340e-01  -4.935816e-01  -3.516559e-01 
+   5.925482e-01  5.116531e-01  6.221718e-01 
+   -1.271667e-01  -7.032697e-01  6.994572e-01 
+   6.884033e-01  1.329117e+00  -1.881847e+00 
+[FindAndVerifyCamera] Checking consistency...
+[BundleInitializeImage] Camera has initial focal length of 660.803
+[BundleInitializeImage] Adjusting...
+  Round[0]: RMS error = 292.56422152 [291.21676091]
+  Round[1]: RMS error = 104.72996091 [104.67176031]
+  Round[2]: RMS error = 15.43221480 [15.27470234]
+  Round[3]: RMS error = 1.70766317 [1.45076625]
+  Round[4]: RMS error = 1.17340243 [0.89216628]
+  Round[5]: RMS error = 1.17338911 [0.89257925]
+  Round[6]: RMS error = 1.17338911 [0.89257831]
+  Round[7]: RMS error = 1.17338911 [0.89257831]
+Sum of squares tolerance reached
+[RefineCameraParameters] Calling with 32 points
+[camera_refine] Constraining focal length to 660.803 (weight: 0.003)
+  Round[0]: RMS error = 1.17338911 [0.89257831], f = 660.803; 0.000e+00 0.000e+00
+  Round[0]: df = 0.000
+  Round[1]: RMS error = 1.14716324 [0.83509280], f = 661.088; -3.266e-02 -8.366e-02
+  Round[1]: df = -0.285
+  Round[2]: RMS error = 1.13441633 [0.81998822], f = 654.029; -6.442e-02 -7.197e-02
+  Round[2]: df = 6.774
+  Round[3]: RMS error = 1.12285702 [0.81286542], f = 645.851; -8.264e-02 -8.669e-02
+  Round[3]: df = 14.953
+  Round[4]: RMS error = 1.11615329 [0.81049913], f = 636.915; -9.380e-02 -1.098e-01
+  Round[4]: df = 23.888
+  Round[5]: RMS error = 1.11137451 [0.80797851], f = 629.589; -9.813e-02 -1.311e-01
+  Round[5]: df = 31.214
+  Round[6]: RMS error = 1.10951359 [0.80547275], f = 629.258; -9.605e-02 -1.367e-01
+  Round[6]: df = 31.545
+  Round[7]: RMS error = 1.10951022 [0.80547957], f = 629.171; -9.600e-02 -1.370e-01
+  Round[7]: df = 31.632
+  Round[8]: RMS error = 1.10950962 [0.80547378], f = 629.163; -9.597e-02 -1.370e-01
+  Round[8]: df = 31.640
+  Round[9]: RMS error = 1.10950963 [0.80547884], f = 629.165; -9.597e-02 -1.370e-01
+  Round[9]: df = 31.638
+  Round[10]: RMS error = 1.10950962 [0.80547861], f = 629.165; -9.597e-02 -1.370e-01
+  Round[10]: df = 31.638
+  Round[11]: RMS error = 1.10950962 [0.80547835], f = 629.165; -9.597e-02 -1.370e-01
+  Round[11]: df = 31.638
+  Round[12]: RMS error = 1.10950962 [0.80547837], f = 629.165; -9.597e-02 -1.370e-01
+  Round[12]: df = 31.638
+  Round[13]: RMS error = 1.10950962 [0.80547842], f = 629.165; -9.597e-02 -1.370e-01
+  Round[13]: df = 31.638
+  Round[14]: RMS error = 1.10950962 [0.80547854], f = 629.165; -9.597e-02 -1.370e-01
+  Round[14]: df = 31.638
+  Round[15]: RMS error = 1.10950962 [0.80547854], f = 629.165; -9.597e-02 -1.370e-01
+  Round[15]: df = 31.638
+Sum of squares tolerance reached
+[RefineCameraParameters] Error: 0.805
+[RefineCameraParameters] Threshold = 8.000
+   E[1.466e-01--5.068e-01]: 15 [0.469]
+   E[5.068e-01--8.671e-01]: 6 [0.188]
+   E[8.671e-01--1.227e+00]: 5 [0.156]
+   E[1.227e+00--1.588e+00]: 3 [0.094]
+   E[1.588e+00--1.948e+00]: 1 [0.031]
+   E[1.948e+00--2.308e+00]: 0 [0.000]
+   E[2.308e+00--2.668e+00]: 0 [0.000]
+   E[2.668e+00--3.028e+00]: 1 [0.031]
+   E[3.028e+00--3.389e+00]: 0 [0.000]
+   E[3.389e+00--3.749e+00]: 1 [0.031]
+[RefineCameraParameters] Exiting after 1 rounds with 32 / 32 points
+[BundleInitializeImage] Initializing took 0.540s
+[SifterApp::BundleAdjust] Adding new matches
+[AddAllNewPoints] Added 22 new points
+[AddAllNewPoints] Ill-conditioned tracks: 0
+[AddAllNewPoints] Bad reprojections: 4
+[AddAllNewPoints] Failed cheirality checks: 0
+[SifterApp::BundleAdjust] Number of points = 514
+initial motstr-SBA error 1020.26 [0.823455]
+mean reprojection error 0.345489
+
+damping term   180310, gain ratio  1.00116, errors 0.823455 / 0.490845 = 1.67763
+pdp_eL2: 608.157, nvis: 1239
+max_pct_change: 4.108e+02
+mean reprojection error 0.300362
+
+damping term  60103.4, gain ratio  1.00045, errors 0.490845 / 0.315386 = 1.55633
+pdp_eL2: 390.763, nvis: 1239
+max_pct_change: 1.875e+01
+mean reprojection error 0.240258
+
+damping term  20034.5, gain ratio  0.99997, errors 0.315386 / 0.160489 = 1.96515
+pdp_eL2: 198.846, nvis: 1239
+max_pct_change: 1.143e+01
+mean reprojection error 0.190777
+
+damping term  6678.15, gain ratio 0.999858, errors 0.160489 / 0.0993968 = 1.61463
+pdp_eL2: 123.153, nvis: 1239
+max_pct_change: 1.354e+03
+mean reprojection error 0.175044
+
+damping term  2226.05, gain ratio  1.00116, errors 0.0993968 / 0.0877093 = 1.13325
+pdp_eL2: 108.672, nvis: 1239
+max_pct_change: 1.182e+02
+mean reprojection error 0.171808
+
+damping term  742.017, gain ratio   1.0041, errors 0.0877093 / 0.0848356 = 1.03387
+pdp_eL2: 105.111, nvis: 1239
+max_pct_change: 2.408e+01
+mean reprojection error 0.170509
+
+damping term  247.339, gain ratio 0.990016, errors 0.0848356 / 0.0816361 = 1.03919
+pdp_eL2: 101.147, nvis: 1239
+max_pct_change: 2.458e+00
+mean reprojection error 0.170419
+
+damping term  82.4463, gain ratio 0.934645, errors 0.0816361 / 0.0776193 = 1.05175
+pdp_eL2: 96.170, nvis: 1239
+max_pct_change: 2.006e+01
+mean reprojection error 0.171259
+
+damping term   28.288, gain ratio 0.821927, errors 0.0776193 / 0.0741983 = 1.04611
+pdp_eL2: 91.932, nvis: 1239
+max_pct_change: 3.441e+00
+mean reprojection error 0.171203
+
+damping term  20.7376, gain ratio 0.860137, errors 0.0741983 / 0.0721121 = 1.02893
+pdp_eL2: 89.347, nvis: 1239
+max_pct_change: 9.861e+00
+mean reprojection error 0.170926
+
+damping term  12.9885, gain ratio 0.682285, errors 0.0721121 / 0.0707765 = 1.01887
+pdp_eL2: 87.692, nvis: 1239
+max_pct_change: 7.369e-01
+mean reprojection error 0.167974
+
+damping term  12.3591, gain ratio   1.0567, errors 0.0707765 / 0.0692165 = 1.02254
+pdp_eL2: 85.759, nvis: 1239
+max_pct_change: 2.981e+01
+mean reprojection error 0.168039
+
+damping term  4.11971, gain ratio 0.538737, errors 0.0692165 / 0.0689022 = 1.00456
+pdp_eL2: 85.370, nvis: 1239
+max_pct_change: 5.181e+02
+mean reprojection error 0.167387
+
+damping term  4.11779, gain ratio 0.956984, errors 0.0689022 / 0.0685311 = 1.00542
+pdp_eL2: 84.910, nvis: 1239
+max_pct_change: 1.211e+00
+mean reprojection error 0.167772
+
+damping term   1.3726, gain ratio -0.0929627, errors 0.0685311 / 0.0685458 = 0.999785
+pdp_eL2: 84.928, nvis: 1239
+mean reprojection error 0.167169
+
+damping term  2.74519, gain ratio 0.825904, errors 0.0685311 / 0.0684093 = 1.00178
+pdp_eL2: 84.759, nvis: 1239
+max_pct_change: 4.469e-01
+mean reprojection error 0.166998
+
+damping term  1.98498, gain ratio  1.13459, errors 0.0684093 / 0.0683298 = 1.00116
+pdp_eL2: 84.661, nvis: 1239
+max_pct_change: 5.000e-01
+mean reprojection error 0.167031
+
+damping term 0.661662, gain ratio 0.840786, errors 0.0683298 / 0.068305 = 1.00036
+pdp_eL2: 84.630, nvis: 1239
+max_pct_change: 9.745e-02
+mean reprojection error 0.167038
+
+damping term 0.452169, gain ratio  1.29982, errors 0.068305 / 0.068279 = 1.00038
+pdp_eL2: 84.598, nvis: 1239
+max_pct_change: 2.166e-01
+mean reprojection error 0.16713
+
+damping term 0.150723, gain ratio 0.362025, errors 0.068279 / 0.068275 = 1.00006
+pdp_eL2: 84.593, nvis: 1239
+max_pct_change: 9.236e-02
+mean reprojection error 0.16716
+
+damping term  0.15389, gain ratio  2.70038, errors 0.068275 / 0.0682594 = 1.00023
+pdp_eL2: 84.573, nvis: 1239
+max_pct_change: 6.767e-02
+mean reprojection error 0.16719
+
+damping term 0.0512967, gain ratio  10.9208, errors 0.0682594 / 0.0682522 = 1.00011
+pdp_eL2: 84.564, nvis: 1239
+max_pct_change: 3.292e-02
+[run_sfm] Number of iterations: 21
+info[6] = 8.000
+[RunSFM] run_sfm took 0.620s
+[RunSFM] Mean error cam 0[6] [342 pts]: 1.660e-01 [med: 1.091e-01, 8.000e+00]
+   E[2.522e-04--1.314e-01]: 201 [0.588]
+   E[1.314e-01--2.625e-01]: 77 [0.225]
+   E[2.625e-01--3.937e-01]: 30 [0.088]
+   E[3.937e-01--5.248e-01]: 17 [0.050]
+   E[5.248e-01--6.560e-01]: 6 [0.018]
+   E[6.560e-01--7.871e-01]: 4 [0.012]
+   E[7.871e-01--9.182e-01]: 0 [0.000]
+   E[9.182e-01--1.049e+00]: 5 [0.015]
+   E[1.049e+00--1.181e+00]: 0 [0.000]
+   E[1.181e+00--1.312e+00]: 2 [0.006]
+[RunSFM] Mean error cam 1[7] [369 pts]: 1.560e-01 [med: 1.075e-01, 8.000e+00]
+   E[7.309e-05--1.074e-01]: 185 [0.501]
+   E[1.074e-01--2.147e-01]: 96 [0.260]
+   E[2.147e-01--3.220e-01]: 48 [0.130]
+   E[3.220e-01--4.293e-01]: 21 [0.057]
+   E[4.293e-01--5.366e-01]: 6 [0.016]
+   E[5.366e-01--6.439e-01]: 3 [0.008]
+   E[6.439e-01--7.512e-01]: 3 [0.008]
+   E[7.512e-01--8.585e-01]: 3 [0.008]
+   E[8.585e-01--9.658e-01]: 0 [0.000]
+   E[9.658e-01--1.073e+00]: 4 [0.011]
+[RunSFM] Mean error cam 2[5] [287 pts]: 1.732e-01 [med: 1.225e-01, 8.000e+00]
+   E[3.972e-04--1.459e-01]: 178 [0.620]
+   E[1.459e-01--2.914e-01]: 66 [0.230]
+   E[2.914e-01--4.368e-01]: 22 [0.077]
+   E[4.368e-01--5.823e-01]: 7 [0.024]
+   E[5.823e-01--7.278e-01]: 6 [0.021]
+   E[7.278e-01--8.733e-01]: 3 [0.010]
+   E[8.733e-01--1.019e+00]: 3 [0.010]
+   E[1.019e+00--1.164e+00]: 1 [0.003]
+   E[1.164e+00--1.310e+00]: 0 [0.000]
+   E[1.310e+00--1.455e+00]: 1 [0.003]
+[RunSFM] Mean error cam 3[8] [187 pts]: 1.912e-01 [med: 1.320e-01, 8.000e+00]
+   E[3.432e-04--1.144e-01]: 89 [0.476]
+   E[1.144e-01--2.284e-01]: 49 [0.262]
+   E[2.284e-01--3.425e-01]: 24 [0.128]
+   E[3.425e-01--4.566e-01]: 8 [0.043]
+   E[4.566e-01--5.706e-01]: 7 [0.037]
+   E[5.706e-01--6.847e-01]: 0 [0.000]
+   E[6.847e-01--7.987e-01]: 4 [0.021]
+   E[7.987e-01--9.128e-01]: 3 [0.016]
+   E[9.128e-01--1.027e+00]: 1 [0.005]
+   E[1.027e+00--1.141e+00]: 2 [0.011]
+[RunSFM] Mean error cam 4[4] [54 pts]: 1.355e-01 [med: 1.070e-01, 8.000e+00]
+   E[2.913e-03--5.314e-02]: 16 [0.296]
+   E[5.314e-02--1.034e-01]: 11 [0.204]
+   E[1.034e-01--1.536e-01]: 10 [0.185]
+   E[1.536e-01--2.038e-01]: 3 [0.056]
+   E[2.038e-01--2.541e-01]: 6 [0.111]
+   E[2.541e-01--3.043e-01]: 1 [0.019]
+   E[3.043e-01--3.545e-01]: 2 [0.037]
+   E[3.545e-01--4.048e-01]: 4 [0.074]
+   E[4.048e-01--4.550e-01]: 0 [0.000]
+   E[4.550e-01--5.052e-01]: 1 [0.019]
+[RunSFM] outlier removal took 0.000s
+[RunSFM] Removing 0 outliers
+[RemoveBadPointsAndCameras] Pruned 0 points
+  focal lengths:
+   [000] 683.176 (660.803) ./et006.jpg 6; -1.266e-01 -3.578e-02
+   [001] 684.745 (660.803) ./et007.jpg 7; -1.406e-01 2.568e-02
+   [002] 683.348 (660.803) ./et005.jpg 5; -1.401e-01 -2.002e-02
+   [003] 681.874 (660.803) ./et008.jpg 8; -1.303e-01 -1.668e-02
+   [004] 629.848 (660.803) ./et004.jpg 4; 2.934e-03 -1.517e-03
+[SifterApp::DumpOutputFile] Wrote file in 0.030s
+  existing_matches[0] = 12
+  score[0]   = 12.000
+  existing_matches[1] = 11
+  score[1]   = 11.000
+  existing_matches[2] = 6
+  score[2]   = 6.000
+  existing_matches[3] = 8
+  score[3]   = 8.000
+Error: parent not found
+[SifterApp::BundleAdjust] max_matches = 12
+[BundleAdjust] Bundle adjustment took 8.110s
+[SifterApp::DumpOutputFile] Wrote file in 0.020s
+[BaseApp::SetMatchesFromPoints] Setting up matches...
+[BaseApp::SetMatchesFromPoints] Done!
+[FixReflectionBug] Reflecting scene...
