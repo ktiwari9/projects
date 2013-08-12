@@ -19,3 +19,4 @@ const double e = 0;
 void test_matches ();
 void test_pose2D2D ();
 void test_pose3D2D ();
+void test_sfm_two_images ();

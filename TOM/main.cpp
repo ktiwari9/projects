@@ -1,15 +1,16 @@
 #include "test_pipeline.h"
 
 // TODO
-  // Faire des fonctions dans Image.cpp qui prennent en argument une autre
-  // image et pas juste un id.
   // Revoir à quoi servent les p2d (int id).
-  // Tester également le pruning avec F.
+  // Test triangulation
+  // Remplir avec les bonnes info le bundle adjustement
 
 int main (int argc, char** argv) {
   //test_matches ();
   //test_pose2D2D ();
-  test_pose3D2D ();
+  //test_pose3D2D ();
+  test_sfm_two_images ();
+
   /*
   // open camera opencv
 

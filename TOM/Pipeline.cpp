@@ -4,32 +4,69 @@ using namespace std;
 using namespace cv;
 
 Pipeline::Pipeline (double uc, double vc, double fu, double fv,
-                    double a, double b, double c, double d, double e)
-{
+                    double a, double b, double c, double d, double e) {
   K_ = (Mat_<double>(3, 3) << fu, 0, uc,
                                0, fv, vc,
                                0,  0,  1);
   dist_coeffs_ = (Mat_<double>(5, 1) << a, b, c, d, e);
   Kinv_ = K_.inv();
+  curr_id_ = 0;
 }
 
 Pipeline::Pipeline (Mat K, Mat dist_coeffs): K_(K), dist_coeffs_ (dist_coeffs)
 {
   Kinv_ = K_.inv();
+  curr_id_ = 0;
+}
+
+void Pipeline::sfm_on_dir (char *path) {
+  std::vector<cv::Mat> images;
+  std::vector<std::string> images_names;
+  double downscale_factor = 1.0;
+  open_imgs_dir(path, images, images_names, downscale_factor);
+}
+
+void Pipeline::sfm_two_images (Mat img1, Mat img2) {
+  Image image1(img1, curr_id_);  ++curr_id_;
+  Image image2(img2, curr_id_);  ++curr_id_;
+
+  extract (image1);
+  extract (image2);
+  match (image1, image2);
+  if (image1.id_ == 0) {
+    Matx34d P0 (1, 0, 0, 0,
+               0, 1, 0, 0,
+               0, 0, 1, 0);
+    image1.set_pose (P0);
+  }
+  compute_pose (image1, image2);
+  triangulate (image1, image2);
+  kf_.push_back (image1);
+  kf_.push_back (image2);
+
+  int count = 0;
+  for (size_t i=0; i<image1.p3d_.size(); ++i) {
+    Point3f tmp = image1.p3d_[i];
+    if (tmp.x != 0 || tmp.y != 0 || tmp.z != 0)
+      ++count;
+  }
+
+  cout << "Got " << count << " points 3D." << endl;
 }
 
 void Pipeline::operator<<(const Image I) {
   Image image(I);
+  curr_.push (image);
+
   Image working = curr_.back();
   Image last_keyframe = kf_.back();
 
-  curr_.push (image);
   if (curr_.size() > MAX_CURRENT_FRAMES)
     curr_.pop(); // remove oldest frame
   extract (working);
   // last kf and last curr
   match (last_keyframe, working);
-  compute_pose (working);
+  compute_pose (last_keyframe, working);
 
   if (last_keyframe != working) {
     Image former_working = curr_.front(); // on prend la frame precedente
@@ -59,17 +96,52 @@ void Pipeline::match (Image &img1, Image &img2) {
   img2.add_match (img1.id_, idx2);
 }
 
-void Pipeline::compute_pose (Image &img) {
+void Pipeline::compute_pose (Image img1, Image &img2) {
   Matx34d P;
   int n = kf_.size();
-  if ( n < 2 ) // not enough frames
-    ;
-  else if ( n == 2 ) // Npoints
-    find_camera_matrix2D2D (img, kf_[n-1], P);
-  else // PNP
-    find_camera_matrix3D2D (img, kf_[n-1], P);
+  if ( n <= 2 ) {// Npoints
+    find_camera_matrix2D2D (img1, img2, P);
+    cout << "Found pose with 2D2D : " << P << endl;
+  }
+  else {// PNP
+    find_camera_matrix3D2D (img1, img2, P);
+    cout << "Found pose with 3D2D : " << P << endl;
+  }
 
-  img.set_pose (P);
+  img2.set_pose (P);
+}
+
+void Pipeline::triangulate (Image &img1, Image &img2) {
+  vector<KeyPoint> correspImg1Pt;
+  vector<CloudPoint> pointcloud;
+  TriangulatePoints(img1.kpts(img2.id_),
+                    img2.kpts(img1.id_),
+                    K_, Kinv_, dist_coeffs_,
+                    img1.P_, img2.P_,
+                    pointcloud,
+                    correspImg1Pt);
+
+  vector<Point2f> p2d1 = img1.p2d (img2.id_);
+  vector<Point2f> p2d2 = img2.p2d (img1.id_);
+  vector<DMatch> matches = img1.matches (img2); // 1->2 matches
+  for (size_t i=0; i<pointcloud.size(); ++i) {
+    pointcloud.imgpt_for_img.push_back (matches.queryIdx);
+    pointcloud.imgpt_for_img.push_back (matches.trainIdx);
+  }
+
+  img1.add_point3d (img2.id_, p3d);
+  img2.add_point3d (img1.id_, p3d);
+}
+
+void Pipeline::adjust_bundle () {
+  std::map<int, Matx34d> Pmats;
+  std::vector<std::vector<cv::KeyPoint> > imgpts;
+  vector<CloudPoint> pointcloud;
+  for (size_t i=0; i< kf_.size(); ++i) {
+    Pmats.insert (std::pair<int, Matx34d>(kf_[i].id_, kf_[i].P_));
+    imgpts.push_back ();
+  }
+  BA.adjustBundle(pointcloud, K_, imgpts, Pmats);
 }
 
 void Pipeline::find_camera_matrix2D2D (Image img1, Image img2, Matx34d &P) {
@@ -85,7 +157,6 @@ void Pipeline::find_camera_matrix2D2D (Image img1, Image img2, Matx34d &P) {
                           P0, P,
                           match,
                           out_cloud);
-  cout << "Fini" << endl;
 }
 
 void Pipeline::find_camera_matrix3D2D (Image img1, Image img2,
@@ -95,22 +166,18 @@ void Pipeline::find_camera_matrix3D2D (Image img1, Image img2,
   std::vector<cv::Point2f> p2d = img2.p2d(img1.id_);
   cout << p3d.size () << endl;
   cout << p2d.size () << endl;
+
+  bool success =
   FindCameraMatrices3D2D (rvec, t, R,
                           p3d, p2d,
                           false, K_, dist_coeffs_);
-  /*
-  P = Matx34d(R(0,0), R(0,1), R(0,1), t(0,0),
-              R(1,0), R(1,1), R(1,1), t(1,0),
-              R(2,0), R(2,1), R(2,1), t(2,0));
-  */
+
+  if (success)
+    P = Matx34d(R(0,0), R(0,1), R(0,2), t(0,0),
+                R(1,0), R(1,1), R(1,2), t(1,0),
+                R(2,0), R(2,1), R(2,2), t(2,0));
+  else
+    P = Matx34d(1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0);
 }
-
-void Pipeline::triangulate (Image &img1, Image &img2) {
-
-}
-
-void find2D3Dcorrespondences (int working_view,
-                            std::vector<cv::Point3f>& p3d,
-                            std::vector<cv::Point2f>& p2d) {
-
-                            }

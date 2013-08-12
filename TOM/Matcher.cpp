@@ -24,6 +24,7 @@ void Matcher::extract ( const Mat img,
   m_detector->detect ( img, kpts );
 	// Extract descriptor for each keypoint
   m_extractor->compute ( img, kpts, descs );
+  cout << "Extracted " << kpts.size () << " interest points." << endl;
 }
 
 void Matcher::match ( Mat descs1, Mat descs2,
@@ -58,6 +59,7 @@ void Matcher::match ( Mat descs1, Mat descs2,
       pts_idx2.push_back ( m_sym_matches[i].trainIdx );
     }
   }
+  cout << "Matched " << m_sym_matches.size () << " interest points." << endl;
 }
 
 void Matcher::symmetryTest (const vector<DMatch>& matches1,

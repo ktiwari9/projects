@@ -20,6 +20,17 @@
 #include <list>
 #include <set>
 
+#ifdef USE_PROFILING
+#define CV_PROFILE(msg,code)	{\
+	std::cout << msg << " ";\
+	double __time_in_ticks = (double)cv::getTickCount();\
+	{ code }\
+	std::cout << "DONE " << ((double)cv::getTickCount() - __time_in_ticks)/cv::getTickFrequency() << "s" << std::endl;\
+}
+#else
+#define CV_PROFILE(msg,code) code
+#endif
+
 struct CloudPoint {
 	cv::Point3d pt;
 	std::vector<int> imgpt_for_img;
@@ -39,18 +50,14 @@ void GetAlignedPointsFromMatch(const std::vector<cv::KeyPoint>& imgpts1,
 							   std::vector<cv::KeyPoint>& pt_set1,
 							   std::vector<cv::KeyPoint>& pt_set2);
 
-void drawArrows(cv::Mat& frame, const std::vector<cv::Point2f>& prevPts, const std::vector<cv::Point2f>& nextPts, const std::vector<uchar>& status, const std::vector<float>& verror, const cv::Scalar& line_color = cv::Scalar(0, 0, 255));
-
-#ifdef USE_PROFILING
-#define CV_PROFILE(msg,code)	{\
-	std::cout << msg << " ";\
-	double __time_in_ticks = (double)cv::getTickCount();\
-	{ code }\
-	std::cout << "DONE " << ((double)cv::getTickCount() - __time_in_ticks)/cv::getTickFrequency() << "s" << std::endl;\
-}
-#else
-#define CV_PROFILE(msg,code) code
-#endif
-
-void open_imgs_dir(char* dir_name, std::vector<cv::Mat>& images, std::vector<std::string>& images_names, double downscale_factor);
+void drawArrows(cv::Mat& frame,
+                const std::vector<cv::Point2f>& prevPts,
+                const std::vector<cv::Point2f>& nextPts,
+                const std::vector<uchar>& status,
+                const std::vector<float>& verror,
+                const cv::Scalar& line_color = cv::Scalar(0, 0, 255));
+void open_imgs_dir(char* dir_name,
+                   std::vector<cv::Mat>& images,
+                   std::vector<std::string>& images_names,
+                   double downscale_factor);
 void imshow_250x250(const std::string& name_, const cv::Mat& patch);

@@ -115,7 +115,7 @@ void test_pose3D2D () {
     matches2[i] = i;
 	}
   image1.add_match (image2.id_, matches1);
-  image1.add_point3d (p3d);
+  image1.set_point3d (p3d);
   image2.add_match (image1.id_, matches2);
   // COMPUTING
 	Matx34d P;
@@ -127,4 +127,20 @@ void test_pose3D2D () {
 	cout << t2[0] << " " << t2[1] << " " << t2[2] << endl;
 
 	cout << P << endl;
+}
+
+void test_triangulation () {
+
+}
+
+void test_sfm_two_images () {
+  // CREATING IMAGES
+  string path_im1 = "/home/gmanfred/Pictures/box_in_scene.png";
+  string path_im2 = "/home/gmanfred/Pictures/box.png";
+  //string path_im1 = "/home/gmanfred/Pictures/fountain_dense/urd/0000.png";
+  //string path_im2 = "/home/gmanfred/Pictures/fountain_dense/urd/0001.png";
+  Mat im1 = imread (path_im1, CV_LOAD_IMAGE_GRAYSCALE);
+  Mat im2 = imread (path_im2, CV_LOAD_IMAGE_GRAYSCALE);
+  // PROCESSING
+  pl.sfm_two_images (im1, im2);
 }

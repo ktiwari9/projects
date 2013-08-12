@@ -20,6 +20,13 @@ std::vector<cv::KeyPoint> Image::kpts () {
   return res;
 }
 
+std::vector<cv::KeyPoint> Image::kpts (int id) {
+  vector<KeyPoint> res;
+  for (int i=0; i<matches_[id].size(); ++i)
+    res.push_back (kpts_[matches_[id][i]]);
+  return res;
+}
+
 vector<Point2f> Image::p2d () {
   vector<Point2f> res;
   for (int i=0; i<kpts_.size(); ++i)
@@ -34,7 +41,7 @@ vector<Point2f> Image::p2d (int id) {
   return res;
 }
 
-vector<Point3f> Image::p3d (int id) {
+//vector<Point3f> Image::p3d (int id) {
   vector<Point3f> res;
   for (int i=0; i<matches_[id].size(); ++i) {
     Point3f tmp = p3d_[matches_[id][i]];
@@ -61,18 +68,29 @@ void Image::set_image (cv::Mat image) {
 
 void Image::add_keypoints (vector<KeyPoint> keypoints) {
   kpts_.resize (keypoints.size());
+  desc_.resize (kpts_.size());
+  p3d_.resize (kpts_.size());
   // Voir si besoin d'une boucle for pour tout transferer
   kpts_ = keypoints;
 }
 
 void Image::add_descriptors (Mat descriptors) {
-  desc_.resize (kpts_.size());
+  //desc_.resize (kpts_.size());
   desc_ = descriptors;
 }
 
-void Image::add_point3d (vector<Point3f> points3d) {
-  p3d_.resize (kpts_.size());
+//void Image::set_point3d (vector<Point3f> points3d) {
+void Image::set_point3d (vector<CloudPoint> points3d) {
+  //p3d_.resize (kpts_.size());
   p3d_ = points3d;
+}
+
+//void Image::add_point3d (int id, vector<Point3f> points3d) {
+void Image::add_point3d (int id, vector<CloudPoint> points3d) {
+  for (size_t i=0; i<matches_[id].size(); ++i) {
+    //cout << points3d[i] << endl;
+    p3d_[matches_[id][i]] = points3d[i];
+  }
 }
 
 void Image::add_match (int image_id, std::vector<unsigned int> index) {

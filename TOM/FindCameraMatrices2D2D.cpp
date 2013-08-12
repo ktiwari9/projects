@@ -35,20 +35,12 @@ Mat GetFundamentalMat(const vector<KeyPoint>& imgpts1,
 					   vector<KeyPoint>& imgpts1_good,
 					   vector<KeyPoint>& imgpts2_good,
 					   vector<DMatch>& matches
-#ifdef __SFM__DEBUG__
-					  ,const Mat& img_1,
-					  const Mat& img_2
-#endif
 					  )
 {
 	//Try to eliminate keypoints based on the fundamental matrix
 	//(although this is not the proper way to do this)
 	vector<uchar> status(imgpts1.size());
 
-#ifdef __SFM__DEBUG__
-	std::vector< DMatch > good_matches_;
-	std::vector<KeyPoint> keypoints_1, keypoints_2;
-#endif
 	//	undistortPoints(imgpts1, imgpts1, cam_matrix, distortion_coeff);
 	//	undistortPoints(imgpts2, imgpts2, cam_matrix, distortion_coeff);
 	//
@@ -69,10 +61,7 @@ Mat GetFundamentalMat(const vector<KeyPoint>& imgpts1,
 		vector<Point2f> pts1,pts2;
 		KeyPointsToPoints(imgpts1_tmp, pts1);
 		KeyPointsToPoints(imgpts2_tmp, pts2);
-#ifdef __SFM__DEBUG__
-		cout << "pts1 " << pts1.size() << " (orig pts " << imgpts1_tmp.size() << ")" << endl;
-		cout << "pts2 " << pts2.size() << " (orig pts " << imgpts2_tmp.size() << ")" << endl;
-#endif
+
 		double minVal,maxVal;
 		cv::minMaxIdx(pts1,&minVal,&maxVal);
 		F = findFundamentalMat(pts1, pts2, FM_RANSAC, 0.006 * maxVal, 0.99, status); //threshold from [Snavely07 4.1]
@@ -91,16 +80,10 @@ Mat GetFundamentalMat(const vector<KeyPoint>& imgpts1,
 			} else {
 				new_matches.push_back(matches[i]);
 			}
-
-#ifdef __SFM__DEBUG__
-			good_matches_.push_back(DMatch(imgpts1_good.size()-1,imgpts1_good.size()-1,1.0));
-			keypoints_1.push_back(imgpts1_tmp[i]);
-			keypoints_2.push_back(imgpts2_tmp[i]);
-#endif
 		}
 	}
 
-	cout << matches.size() << " matches before, " << new_matches.size() << " new matches after Fundamental Matrix\n";
+	cout << matches.size() << " matches before, " << new_matches.size() << " matches after Fundamental Matrix\n";
 	matches = new_matches; //keep only those points who survived the fundamental matrix
 
 	return F;
@@ -112,10 +95,11 @@ void TakeSVDOfE(Mat_<double>& E, Mat& svd_u, Mat& svd_vt, Mat& svd_w) {
 	svd_u = svd.u;
 	svd_vt = svd.vt;
 	svd_w = svd.w;
-
+  /*
 	cout << "----------------------- SVD ------------------------\n";
 	cout << "U:\n"<<svd_u<<"\nW:\n"<<svd_w<<"\nVt:\n"<<svd_vt<<endl;
 	cout << "----------------------------------------------------\n";
+	*/
 }
 
 bool TestTriangulation(const vector<CloudPoint>& pcloud, const Matx34d& P, vector<uchar>& status) {
@@ -217,10 +201,6 @@ bool FindCameraMatrices2D2D(const Mat& K,
 						Matx34d& P1,
 						vector<DMatch>& matches,
 						vector<CloudPoint>& outCloud
-#ifdef __SFM__DEBUG__
-						,const Mat& img_1,
-						const Mat& img_2
-#endif
 						)
 {
 	//Find camera matrices
@@ -228,12 +208,8 @@ bool FindCameraMatrices2D2D(const Mat& K,
 		cout << "Find camera matrices...";
 		//double t = getTickCount();
 
-		Mat F = GetFundamentalMat(imgpts1,imgpts2,imgpts1_good,imgpts2_good,matches
-#ifdef __SFM__DEBUG__
-								  ,img_1,img_2
-#endif
-								  );
-		if(matches.size() < 100) { // || ((double)imgpts1_good.size() / (double)imgpts1.size()) < 0.25
+		Mat F= GetFundamentalMat(imgpts1,imgpts2,imgpts1_good,imgpts2_good,matches);
+		if(matches.size() < 50) { // || ((double)imgpts1_good.size() / (double)imgpts1.size()) < 0.25
 			cerr << "not enough inliers after F matrix" << endl;
 			return false;
 		}
@@ -272,7 +248,7 @@ bool FindCameraMatrices2D2D(const Mat& K,
 			P1 = Matx34d(R1(0,0),	R1(0,1),	R1(0,2),	t1(0),
 						 R1(1,0),	R1(1,1),	R1(1,2),	t1(1),
 						 R1(2,0),	R1(2,1),	R1(2,2),	t1(2));
-			cout << "Testing P1 " << endl << Mat(P1) << endl;
+			//cout << "Testing P1 " << endl << Mat(P1) << endl;
 
 			vector<CloudPoint> pcloud,pcloud1; vector<KeyPoint> corresp;
 			double reproj_error1 = TriangulatePoints(imgpts1_good, imgpts2_good, K, Kinv, distcoeff, P, P1, pcloud, corresp);
@@ -283,7 +259,7 @@ bool FindCameraMatrices2D2D(const Mat& K,
 				P1 = Matx34d(R1(0,0),	R1(0,1),	R1(0,2),	t2(0),
 							 R1(1,0),	R1(1,1),	R1(1,2),	t2(1),
 							 R1(2,0),	R1(2,1),	R1(2,2),	t2(2));
-				cout << "Testing P1 "<< endl << Mat(P1) << endl;
+				//cout << "Testing P1 "<< endl << Mat(P1) << endl;
 
 				pcloud.clear(); pcloud1.clear(); corresp.clear();
 				reproj_error1 = TriangulatePoints(imgpts1_good, imgpts2_good, K, Kinv, distcoeff, P, P1, pcloud, corresp);
@@ -299,7 +275,7 @@ bool FindCameraMatrices2D2D(const Mat& K,
 					P1 = Matx34d(R2(0,0),	R2(0,1),	R2(0,2),	t1(0),
 								 R2(1,0),	R2(1,1),	R2(1,2),	t1(1),
 								 R2(2,0),	R2(2,1),	R2(2,2),	t1(2));
-					cout << "Testing P1 "<< endl << Mat(P1) << endl;
+					//cout << "Testing P1 "<< endl << Mat(P1) << endl;
 
 					pcloud.clear(); pcloud1.clear(); corresp.clear();
 					reproj_error1 = TriangulatePoints(imgpts1_good, imgpts2_good, K, Kinv, distcoeff, P, P1, pcloud, corresp);
@@ -309,14 +285,14 @@ bool FindCameraMatrices2D2D(const Mat& K,
 						P1 = Matx34d(R2(0,0),	R2(0,1),	R2(0,2),	t2(0),
 									 R2(1,0),	R2(1,1),	R2(1,2),	t2(1),
 									 R2(2,0),	R2(2,1),	R2(2,2),	t2(2));
-						cout << "Testing P1 "<< endl << Mat(P1) << endl;
+						//cout << "Testing P1 "<< endl << Mat(P1) << endl;
 
 						pcloud.clear(); pcloud1.clear(); corresp.clear();
 						reproj_error1 = TriangulatePoints(imgpts1_good, imgpts2_good, K, Kinv, distcoeff, P, P1, pcloud, corresp);
 						reproj_error2 = TriangulatePoints(imgpts2_good, imgpts1_good, K, Kinv, distcoeff, P1, P, pcloud1, corresp);
 
 						if (!TestTriangulation(pcloud,P1,tmp_status) || !TestTriangulation(pcloud1,P,tmp_status) || reproj_error1 > 100.0 || reproj_error2 > 100.0) {
-							cout << "Shit." << endl;
+							//cout << "Shit." << endl;
 							return false;
 						}
 					}

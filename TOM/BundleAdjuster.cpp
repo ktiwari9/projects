@@ -20,11 +20,10 @@
 
 using namespace V3D;
 using namespace std;
-using namespace cv; 
+using namespace cv;
 
 namespace
 {
-	
 	inline void
 	showErrorStatistics(double const f0,
 						StdDistortionFunction const& distortion,
@@ -35,17 +34,17 @@ namespace
 						vector<int> const& correspondingPoint)
 	{
 		int const K = measurements.size();
-		
+
 		double meanReprojectionError = 0.0;
 		for (int k = 0; k < K; ++k)
 		{
 			int const i = correspondingView[k];
 			int const j = correspondingPoint[k];
 			Vector2d p = cams[i].projectPoint(distortion, Xs[j]);
-			
+
 			double reprojectionError = norm_L2(f0 * (p - measurements[k]));
 			meanReprojectionError += reprojectionError;
-			
+
 //			cout << "i=" << i << " j=" << j << " k=" << k << "\n";
 //			 displayVector(Xs[j]);
 //			 displayVector(f0*p);
@@ -73,18 +72,18 @@ int BundleAdjuster::Count2DMeasurements(const vector<CloudPoint>& pointcloud) {
 	return K;
 }
 
-void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud, 
+void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 								  Mat& cam_matrix,
 								  const std::vector<std::vector<cv::KeyPoint> >& imgpts,
 								  std::map<int ,cv::Matx34d>& Pmats
-								) 
+								)
 {
 	int N = Pmats.size(), M = pointcloud.size(), K = Count2DMeasurements(pointcloud);
-	
+
 	cout << "N (cams) = " << N << " M (points) = " << M << " K (measurements) = " << K << endl;
-	
+
 	StdDistortionFunction distortion;
-	
+
 	//conver camera intrinsics to BA datastructs
 	Matrix3x3d KMat;
 	makeIdentityMatrix(KMat);
@@ -93,18 +92,18 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 	KMat[0][1] = cam_matrix.at<double>(0,1); //skew
 	KMat[0][2] = cam_matrix.at<double>(0,2); //ppx
 	KMat[1][2] = cam_matrix.at<double>(1,2); //ppy
-	
+
 	double const f0 = KMat[0][0];
 	cout << "intrinsic before bundle = "; displayMatrix(KMat);
 	Matrix3x3d Knorm = KMat;
 	// Normalize the intrinsic to have unit focal length.
 	scaleMatrixIP(1.0/f0, Knorm);
 	Knorm[2][2] = 1.0;
-	
+
 	vector<int> pointIdFwdMap(M);
 	map<int, int> pointIdBwdMap;
-	
-	//conver 3D point cloud to BA datastructs
+
+	//convert 3D point cloud to BA datastructs
 	vector<Vector3d > Xs(M);
 	for (int j = 0; j < M; ++j)
 	{
@@ -116,10 +115,10 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 		pointIdBwdMap.insert(make_pair(pointId, j));
 	}
 	cout << "Read the 3D points." << endl;
-	
+
 	vector<int> camIdFwdMap(N,-1);
 	map<int, int> camIdBwdMap;
-	
+
 	//convert cameras to BA datastructs
 	vector<CameraMatrix> cams(N);
 	for (int i = 0; i < N; ++i)
@@ -127,30 +126,30 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 		int camId = i;
 		Matrix3x3d R;
 		Vector3d T;
-		
+
 		Matx34d& P = Pmats[i];
-		
+
 		R[0][0] = P(0,0); R[0][1] = P(0,1); R[0][2] = P(0,2); T[0] = P(0,3);
 		R[1][0] = P(1,0); R[1][1] = P(1,1); R[1][2] = P(1,2); T[1] = P(1,3);
 		R[2][0] = P(2,0); R[2][1] = P(2,1); R[2][2] = P(2,2); T[2] = P(2,3);
-		
+
 		camIdFwdMap[i] = camId;
 		camIdBwdMap.insert(make_pair(camId, i));
-		
+
 		cams[i].setIntrinsic(Knorm);
 		cams[i].setRotation(R);
 		cams[i].setTranslation(T);
 	}
 	cout << "Read the cameras." << endl;
-	
+
 	vector<Vector2d > measurements;
 	vector<int> correspondingView;
 	vector<int> correspondingPoint;
-	
+
 	measurements.reserve(K);
 	correspondingView.reserve(K);
 	correspondingPoint.reserve(K);
-	
+
 	//convert 2D measurements to BA datastructs
 	for (unsigned int k = 0; k < pointcloud.size(); ++k)
 	{
@@ -158,12 +157,12 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 			if (pointcloud[k].imgpt_for_img[i] >= 0) {
 				int view = i, point = k;
 				Vector3d p, np;
-				
+
 				Point cvp = imgpts[i][pointcloud[k].imgpt_for_img[i]].pt;
 				p[0] = cvp.x;
 				p[1] = cvp.y;
 				p[2] = 1.0;
-				
+
 				if (camIdBwdMap.find(view) != camIdBwdMap.end() &&
 					pointIdBwdMap.find(point) != pointIdBwdMap.end())
 				{
@@ -176,16 +175,16 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 			}
 		}
 	} // end for (k)
-	
+
 	K = measurements.size();
-	
+
 	cout << "Read " << K << " valid 2D measurements." << endl;
-	
+
 	showErrorStatistics(f0, distortion, cams, Xs, measurements, correspondingView, correspondingPoint);
 
 //	V3D::optimizerVerbosenessLevel = 1;
 	double const inlierThreshold = 2.0 / fabs(f0);
-	
+
 	Matrix3x3d K0 = cams[0].getIntrinsic();
 	cout << "K0 = "; displayMatrix(K0);
 
@@ -196,29 +195,29 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 		CommonInternalsMetricBundleOptimizer opt(V3D::FULL_BUNDLE_FOCAL_LENGTH_PP, inlierThreshold, K0, distortion, cams, Xs,
 												 measurements, correspondingView, correspondingPoint);
 //		StdMetricBundleOptimizer opt(inlierThreshold,cams,Xs,measurements,correspondingView,correspondingPoint);
-		
+
 		opt.tau = 1e-3;
 		opt.maxIterations = 50;
 		opt.minimize();
-		
+
 		cout << "optimizer status = " << opt.status << endl;
-		
+
 		good_adjustment = (opt.status != 2);
 	}
-	
+
 	cout << "refined K = "; displayMatrix(K0);
-	
+
 	for (int i = 0; i < N; ++i) cams[i].setIntrinsic(K0);
-	
+
 	Matrix3x3d Knew = K0;
 	scaleMatrixIP(f0, Knew);
 	Knew[2][2] = 1.0;
 	cout << "Knew = "; displayMatrix(Knew);
-	
+
 	showErrorStatistics(f0, distortion, cams, Xs, measurements, correspondingView, correspondingPoint);
-	
+
 	if(good_adjustment) { //good adjustment?
-		
+
 		//Vector3d mean(0.0, 0.0, 0.0);
 		//for (unsigned int j = 0; j < Xs.size(); ++j) addVectorsIP(Xs[j], mean);
 		//scaleVectorIP(1.0/Xs.size(), mean);
@@ -230,31 +229,31 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 		//std::sort(norms.begin(), norms.end());
 		//float distThr = norms[int(norms.size() * 0.9f)];
 		//cout << "90% quantile distance: " << distThr << endl;
-		
+
 		//extract 3D points
 		for (unsigned int j = 0; j < Xs.size(); ++j)
 		{
 			//if (distance_L2(Xs[j], mean) > 3*distThr) makeZeroVector(Xs[j]);
-			
+
 			pointcloud[j].pt.x = Xs[j][0];
 			pointcloud[j].pt.y = Xs[j][1];
 			pointcloud[j].pt.z = Xs[j][2];
 		}
-		
+
 		//extract adjusted cameras
 		for (int i = 0; i < N; ++i)
 		{
 			Matrix3x3d R = cams[i].getRotation();
 			Vector3d T = cams[i].getTranslation();
-			
+
 			Matx34d P;
 			P(0,0) = R[0][0]; P(0,1) = R[0][1]; P(0,2) = R[0][2]; P(0,3) = T[0];
 			P(1,0) = R[1][0]; P(1,1) = R[1][1]; P(1,2) = R[1][2]; P(1,3) = T[1];
 			P(2,0) = R[2][0]; P(2,1) = R[2][1]; P(2,2) = R[2][2]; P(2,3) = T[2];
-			
+
 			Pmats[i] = P;
 		}
-		
+
 
 		//TODO: extract camera intrinsics
 		cam_matrix.at<double>(0,0) = Knew[0][0];
