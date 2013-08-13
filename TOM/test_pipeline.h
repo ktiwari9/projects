@@ -19,8 +19,10 @@ const double e = 0;
 void test_matches ();
 
 void setup_test_data ();
+void load_true_data ();
 void test_pose2D2D ();
 void test_pose3D2D ();
 void test_triangulation ();
 void test_bundle ();
+void test_bundle_true ();
 void test_sfm_two_images ();

@@ -27,11 +27,13 @@
 
 int main (int argc, char** argv) {
   //test_matches ();
-  setup_test_data ();
+  //setup_test_data ();
+  load_true_data ();
   //test_pose2D2D ();
   //test_pose3D2D ();
   //test_triangulation ();
-  test_bundle ();
+  //test_bundle ();
+  test_bundle_true ();
   //test_sfm_two_images ();
 
   /*

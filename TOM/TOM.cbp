@@ -19,6 +19,11 @@
 					<Add library="/usr/local/lib/libopencv_gpu.so" />
 					<Add library="/usr/local/lib/libopencv_calib3d.so" />
 					<Add library="/usr/local/lib/libopencv_features2d.so" />
+					<Add library="/usr/local/lib/libopencv_imgproc.so" />
+					<Add library="/usr/local/lib/libopencv_nonfree.so" />
+					<Add library="/usr/local/lib/libopencv_highgui.so" />
+					<Add library="/home/gmanfred/devel/sandbox/SfM-Toy-Library-master/3rdparty/SSBA-3.0/build/libcolamd.a" />
+					<Add library="/home/gmanfred/devel/sandbox/SfM-Toy-Library-master/3rdparty/SSBA-3.0/build/libV3D.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -38,8 +43,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Linker>
-		</Linker>
 		<Unit filename="Common.cpp" />
 		<Unit filename="Common.h" />
 		<Unit filename="FindCameraMatrices2D2D.cpp" />

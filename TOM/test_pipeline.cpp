@@ -24,6 +24,18 @@ void test_matches () {
   image1.draw_matches(image2);
 }
 
+void load_true_data () {
+  // CREATING IMAGES
+  Mat im1, im2;
+  string path_im1 = "/home/gmanfred/Pictures/box_in_scene.png";
+  string path_im2 = "/home/gmanfred/Pictures/box.png";
+  im1 = imread (path_im1, CV_LOAD_IMAGE_GRAYSCALE);
+  im2 = imread (path_im2, CV_LOAD_IMAGE_GRAYSCALE);
+  //Image image1(im1, 0), image2(im2, 1);
+  image1 = Image(im1, 0);
+  image2 = Image(im2, 1);
+}
+
 void setup_test_data () {
   // CREATING IMAGES
   Mat im1, im2;
@@ -130,12 +142,33 @@ void test_bundle () {
   pl.kf_.push_back (image1);
   pl.kf_.push_back (image2);
   pl.adjust_bundle ();
-/*
+
 	cout << R2[0][0] << " " << R2[0][1] << " " << R2[0][2] << endl
 			 << R2[1][0] << " " << R2[1][1] << " " << R2[1][2] << endl
 			 << R2[2][0] << " " << R2[2][1] << " " << R2[2][2] << endl;
 	cout << t2[0] << " " << t2[1] << " " << t2[2] << endl;
-*/
+}
+
+void test_bundle_true () {
+	Matx34d P;
+  pl.extract (image1);
+  pl.extract (image2);
+  pl.match (image1, image2);
+	pl.find_camera_matrix2D2D(image1, image2, P);
+
+  Matx34d P0 (1, 0, 0, 0,
+              0, 1, 0, 0,
+              0, 0, 1, 0);
+	image1.set_pose (P0);
+	image2.set_pose (P);
+
+  pl.triangulate (image1, image2);
+
+  cout << image2.P_ << endl;
+  cout << endl;
+  pl.kf_.push_back (image1);
+  pl.kf_.push_back (image2);
+  pl.adjust_bundle ();
 }
 
 void test_sfm_two_images () {
