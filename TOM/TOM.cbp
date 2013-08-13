@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="/home/gmanfred/devel/sandbox/SfM-Toy-Library-master/3rdparty/SSBA-3.0" />
 				</Compiler>
 				<Linker>
 					<Add library="/usr/local/lib/libopencv_core.so" />
@@ -22,8 +23,8 @@
 					<Add library="/usr/local/lib/libopencv_imgproc.so" />
 					<Add library="/usr/local/lib/libopencv_nonfree.so" />
 					<Add library="/usr/local/lib/libopencv_highgui.so" />
-					<Add library="/home/gmanfred/devel/sandbox/SfM-Toy-Library-master/3rdparty/SSBA-3.0/build/libcolamd.a" />
 					<Add library="/home/gmanfred/devel/sandbox/SfM-Toy-Library-master/3rdparty/SSBA-3.0/build/libV3D.a" />
+					<Add library="/home/gmanfred/devel/sandbox/SfM-Toy-Library-master/3rdparty/SSBA-3.0/build/libcolamd.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -43,6 +44,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BundleAdjuster.cpp" />
+		<Unit filename="BundleAdjuster.h" />
 		<Unit filename="Common.cpp" />
 		<Unit filename="Common.h" />
 		<Unit filename="FindCameraMatrices2D2D.cpp" />
@@ -57,9 +60,13 @@
 		<Unit filename="Object.h" />
 		<Unit filename="Pipeline.cpp" />
 		<Unit filename="Pipeline.h" />
+		<Unit filename="SynPNP.cpp" />
+		<Unit filename="SynPNP.h" />
 		<Unit filename="Triangulation.cpp" />
 		<Unit filename="Triangulation.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="test_pipeline.cpp" />
+		<Unit filename="test_pipeline.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
