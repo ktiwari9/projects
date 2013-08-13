@@ -130,11 +130,12 @@ void test_bundle () {
   pl.kf_.push_back (image1);
   pl.kf_.push_back (image2);
   pl.adjust_bundle ();
-
+/*
 	cout << R2[0][0] << " " << R2[0][1] << " " << R2[0][2] << endl
 			 << R2[1][0] << " " << R2[1][1] << " " << R2[1][2] << endl
 			 << R2[2][0] << " " << R2[2][1] << " " << R2[2][2] << endl;
 	cout << t2[0] << " " << t2[1] << " " << t2[2] << endl;
+*/
 }
 
 void test_sfm_two_images () {

@@ -44,16 +44,6 @@ namespace
 
 			double reprojectionError = norm_L2(f0 * (p - measurements[k]));
 			meanReprojectionError += reprojectionError;
-
-//			cout << "i=" << i << " j=" << j << " k=" << k << "\n";
-//			 displayVector(Xs[j]);
-//			 displayVector(f0*p);
-//			 displayVector(f0*measurements[k]);
-//			 displayMatrix(cams[i].getRotation());
-//			 displayVector(cams[i].getTranslation());
-//			 cout << "##################### error = " << reprojectionError << "\n";
-//			 if(reprojectionError > 2)
-//             cout << "!\n";
 		}
 		cout << "mean reprojection error (in pixels): " << meanReprojectionError/K << endl;
 	}

@@ -103,7 +103,7 @@
 1376313239 source:/home/gmanfred/devel/these/projects/TOM/main.cpp
 	"test_pipeline.h"
 
-1376304958 /home/gmanfred/devel/these/projects/TOM/test_pipeline.h
+1376381561 /home/gmanfred/devel/these/projects/TOM/test_pipeline.h
 	"SynPNP.h"
 	"Pipeline.h"
 
@@ -117,13 +117,13 @@
 	"Triangulation.h"
 	"BundleAdjuster.h"
 
-1376324801 source:/home/gmanfred/devel/these/projects/TOM/test_pipeline.cpp
+1376381273 source:/home/gmanfred/devel/these/projects/TOM/test_pipeline.cpp
 	"test_pipeline.h"
 
 1376324685 source:/home/gmanfred/devel/these/projects/TOM/Pipeline.cpp
 	"Pipeline.h"
 
-1376323669 source:/home/gmanfred/devel/these/projects/TOM/BundleAdjuster.cpp
+1376380987 source:/home/gmanfred/devel/these/projects/TOM/BundleAdjuster.cpp
 	"BundleAdjuster.h"
 	"Common.h"
 	<Math/v3d_linear.h>
@@ -195,6 +195,70 @@
 	"Base/v3d_exception.h"
 
 1319442645 /home/gmanfred/devel/sandbox/SSBA-3.0/Math/v3d_mathutilities.h
+	"Math/v3d_linear.h"
+	"Math/v3d_linear_tnt.h"
+	<vector>
+
+1313596214 /home/gmanfred/devel/sandbox/SSBA-3.0//Math/v3d_linear.h
+	"Math/v3d_linearbase.h"
+	<iostream>
+
+1321468601 /home/gmanfred/devel/sandbox/SSBA-3.0//Math/v3d_linearbase.h
+	<cassert>
+	<algorithm>
+	<vector>
+	<cmath>
+	"Base/v3d_serialization.h"
+
+1321468601 /home/gmanfred/devel/sandbox/SSBA-3.0//Base/v3d_serialization.h
+	<string>
+	<iostream>
+	<fstream>
+	<vector>
+	<set>
+	<map>
+	<cstring>
+	"Base/v3d_exception.h"
+
+1299329250 /home/gmanfred/devel/sandbox/SSBA-3.0//Base/v3d_exception.h
+	<exception>
+	<string>
+	<sstream>
+	<iostream>
+	<assert.h>
+
+1321469298 /home/gmanfred/devel/sandbox/SSBA-3.0//Base/v3d_vrmlio.h
+	"Geometry/v3d_cameramatrix.h"
+	<iostream>
+	<string>
+	<cstdio>
+
+1321646257 /home/gmanfred/devel/sandbox/SSBA-3.0//Geometry/v3d_cameramatrix.h
+	"Base/v3d_serialization.h"
+	"Math/v3d_linear.h"
+	"Geometry/v3d_distortion.h"
+
+1299329250 /home/gmanfred/devel/sandbox/SSBA-3.0//Geometry/v3d_distortion.h
+	"Math/v3d_linear.h"
+
+1299329250 /home/gmanfred/devel/sandbox/SSBA-3.0//Geometry/v3d_metricbundle.h
+	"Math/v3d_optimization.h"
+	"Math/v3d_linear.h"
+	"Geometry/v3d_cameramatrix.h"
+	"Geometry/v3d_distortion.h"
+
+1315393738 /home/gmanfred/devel/sandbox/SSBA-3.0//Math/v3d_optimization.h
+	"Math/v3d_linear.h"
+	"Math/v3d_linear_tnt.h"
+	"Math/v3d_mathutilities.h"
+	<vector>
+	<iostream>
+
+1299329249 /home/gmanfred/devel/sandbox/SSBA-3.0//Math/v3d_linear_tnt.h
+	"Math/v3d_linear.h"
+	"Base/v3d_exception.h"
+
+1319442645 /home/gmanfred/devel/sandbox/SSBA-3.0//Math/v3d_mathutilities.h
 	"Math/v3d_linear.h"
 	"Math/v3d_linear_tnt.h"
 	<vector>
