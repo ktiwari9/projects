@@ -154,6 +154,7 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 	for (unsigned int k = 0; k < pointcloud.size(); ++k)
 	{
 		for (unsigned int i=0; i<pointcloud[k].imgpt_for_img.size(); i++) {
+
 			if (pointcloud[k].imgpt_for_img[i] >= 0) {
 				int view = i, point = k;
 				Vector3d p, np;
@@ -217,18 +218,6 @@ void BundleAdjuster::adjustBundle(vector<CloudPoint>& pointcloud,
 	showErrorStatistics(f0, distortion, cams, Xs, measurements, correspondingView, correspondingPoint);
 
 	if(good_adjustment) { //good adjustment?
-
-		//Vector3d mean(0.0, 0.0, 0.0);
-		//for (unsigned int j = 0; j < Xs.size(); ++j) addVectorsIP(Xs[j], mean);
-		//scaleVectorIP(1.0/Xs.size(), mean);
-		//
-		//vector<float> norms(Xs.size());
-		//for (unsigned int j = 0; j < Xs.size(); ++j)
-		//	norms[j] = distance_L2(Xs[j], mean);
-		//
-		//std::sort(norms.begin(), norms.end());
-		//float distThr = norms[int(norms.size() * 0.9f)];
-		//cout << "90% quantile distance: " << distThr << endl;
 
 		//extract 3D points
 		for (unsigned int j = 0; j < Xs.size(); ++j)

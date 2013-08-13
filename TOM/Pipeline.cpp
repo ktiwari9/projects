@@ -46,8 +46,8 @@ void Pipeline::sfm_two_images (Mat img1, Mat img2) {
 
   int count = 0;
   for (size_t i=0; i<image1.p3d_.size(); ++i) {
-    Point3f tmp = image1.p3d_[i];
-    if (tmp.x != 0 || tmp.y != 0 || tmp.z != 0)
+    CloudPoint tmp = image1.p3d_[i];
+    if (tmp.pt.x != 0 || tmp.pt.y != 0 || tmp.pt.z != 0)
       ++count;
   }
 
@@ -114,34 +114,40 @@ void Pipeline::compute_pose (Image img1, Image &img2) {
 void Pipeline::triangulate (Image &img1, Image &img2) {
   vector<KeyPoint> correspImg1Pt;
   vector<CloudPoint> pointcloud;
+  cout << img1.kpts(img2.id_).size () << endl;
   TriangulatePoints(img1.kpts(img2.id_),
                     img2.kpts(img1.id_),
                     K_, Kinv_, dist_coeffs_,
                     img1.P_, img2.P_,
                     pointcloud,
                     correspImg1Pt);
-
   vector<Point2f> p2d1 = img1.p2d (img2.id_);
   vector<Point2f> p2d2 = img2.p2d (img1.id_);
   vector<DMatch> matches = img1.matches (img2); // 1->2 matches
   for (size_t i=0; i<pointcloud.size(); ++i) {
-    pointcloud.imgpt_for_img.push_back (matches.queryIdx);
-    pointcloud.imgpt_for_img.push_back (matches.trainIdx);
+    pointcloud[i].imgpt_for_img.push_back (matches[i].queryIdx);
+    pointcloud[i].imgpt_for_img.push_back (matches[i].trainIdx);
+    //cout << pointcloud[i].imgpt_for_img.size () << endl;
   }
 
-  img1.add_point3d (img2.id_, p3d);
-  img2.add_point3d (img1.id_, p3d);
+  img1.add_point3d (img2.id_, pointcloud);
+  img2.add_point3d (img1.id_, pointcloud);
 }
 
 void Pipeline::adjust_bundle () {
-  std::map<int, Matx34d> Pmats;
-  std::vector<std::vector<cv::KeyPoint> > imgpts;
-  vector<CloudPoint> pointcloud;
+  map<int, Matx34d> Pmats;
+  vector< vector<KeyPoint> > imgpts;
+  vector< vector<CloudPoint> > pointcloud;
   for (size_t i=0; i< kf_.size(); ++i) {
     Pmats.insert (std::pair<int, Matx34d>(kf_[i].id_, kf_[i].P_));
-    imgpts.push_back ();
+    imgpts.push_back (kf_[i].kpts_);
+    pointcloud.push_back (kf_[i].p3d_);
   }
-  BA.adjustBundle(pointcloud, K_, imgpts, Pmats);
+  vector<CloudPoint> cloud = merge_pointcloud (pointcloud);
+  BA.adjustBundle(cloud, K_, imgpts, Pmats);
+
+  cout << Pmats[1] << endl;
+  cout << endl;
 }
 
 void Pipeline::find_camera_matrix2D2D (Image img1, Image img2, Matx34d &P) {
@@ -162,7 +168,9 @@ void Pipeline::find_camera_matrix2D2D (Image img1, Image img2, Matx34d &P) {
 void Pipeline::find_camera_matrix3D2D (Image img1, Image img2,
                                         Matx34d &P) {
   cv::Mat_<double> rvec, R, t;
-  std::vector<cv::Point3f> p3d = img1.p3d(img2.id_);
+  std::vector<cv::Point3f> p3d;
+  for (size_t i=0; i<p3d.size(); ++i)
+    p3d.push_back (img1.p3d(img2.id_)[i].pt);
   std::vector<cv::Point2f> p2d = img2.p2d(img1.id_);
   cout << p3d.size () << endl;
   cout << p2d.size () << endl;
@@ -181,3 +189,27 @@ void Pipeline::find_camera_matrix3D2D (Image img1, Image img2,
                 0, 1, 0, 0,
                 0, 0, 1, 0);
 }
+
+vector<CloudPoint> Pipeline::merge_pointcloud (vector< vector<CloudPoint> > clouds) {
+  vector<CloudPoint> res;
+  int count = 0;
+  for (size_t i=0; i<clouds.size (); ++i) {
+    for (size_t j=0; j<clouds[i].size (); ++j) {
+      if ( !is_in (clouds[i][j], res) )
+        res.push_back (clouds[i][j]);
+    }
+  }
+  return res;
+}
+
+
+
+
+
+
+
+
+
+
+
+

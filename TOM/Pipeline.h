@@ -38,7 +38,9 @@ class Pipeline {
   void find_camera_matrix2D2D (Image img1, Image img2, cv::Matx34d &P);
   void find_camera_matrix3D2D (Image img1, Image img2, cv::Matx34d &P);
 
- private:
+// private:
+  std::vector<CloudPoint> merge_pointcloud (std::vector< std::vector<CloudPoint> > clouds);
+
   BundleAdjuster BA;
   Matcher matcher_;
   std::vector<Image> kf_; // keyframe

@@ -12,10 +12,8 @@
 *.la
 *.a
 
-# Codeblocks projects
-*.cbp
-*.layout
-*.depend
+#gedit backup files
+*~
 
 /bin
 /obj

@@ -180,3 +180,13 @@ void open_imgs_dir(char* dir_name, std::vector<cv::Mat>& images, std::vector<std
 		images.push_back(m_);
 	}
 }
+
+bool is_in (CloudPoint point, vector<CloudPoint> cloud) {
+
+  for (size_t i=0; i<cloud.size (); ++i) {
+    Point3f diff = point.pt - cloud[i].pt;
+    if (fabs(diff.x) < 1e-7 && fabs(diff.y) < 1e-7 && fabs(diff.z) < 1e-7)
+      return true;
+  }
+  return false;
+}
