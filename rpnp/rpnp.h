@@ -108,8 +108,7 @@ class rpnp {
   void getpoly7 (double F[5], double F7[8]);
   void calcampose (double * XXc, double * XXw,
                    double R[3][3], double t[3]);
-  void polyval (double D6[7], double t2s[7],
-                double F[7]);
+  void polyval (double D6[7], double t2s[7], double F[7]);
   double norm (double u[3]);
   double norm (double u, double v, double w);
   void xcross(double a[3], double b[3],
