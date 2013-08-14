@@ -27,8 +27,10 @@ void test_matches () {
 void load_true_data () {
   // CREATING IMAGES
   Mat im1, im2;
-  string path_im1 = "/home/gmanfred/Pictures/box_in_scene.png";
-  string path_im2 = "/home/gmanfred/Pictures/box.png";
+  //string path_im1 = "/home/gmanfred/Pictures/box_in_scene.png";
+  //string path_im2 = "/home/gmanfred/Pictures/box.png";
+  string path_im1 = "/home/gmanfred/Desktop/sift/house.000.pgm";
+  string path_im2 = "/home/gmanfred/Desktop/sift/house.001.pgm";
   im1 = imread (path_im1, CV_LOAD_IMAGE_GRAYSCALE);
   im2 = imread (path_im2, CV_LOAD_IMAGE_GRAYSCALE);
   //Image image1(im1, 0), image2(im2, 1);
@@ -134,10 +136,7 @@ void test_bundle () {
               0, 0, 1, 0);
 	image1.set_pose (P0);
 	image2.set_pose (P);
-
   pl.triangulate (image1, image2);
-
-  cout << image2.P_ << endl;
   cout << endl;
   pl.kf_.push_back (image1);
   pl.kf_.push_back (image2);
@@ -154,6 +153,7 @@ void test_bundle_true () {
   pl.extract (image1);
   pl.extract (image2);
   pl.match (image1, image2);
+  image1.draw_matches(image2);
 	pl.find_camera_matrix2D2D(image1, image2, P);
 
   Matx34d P0 (1, 0, 0, 0,

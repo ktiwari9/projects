@@ -190,3 +190,12 @@ bool is_in (CloudPoint point, vector<CloudPoint> cloud) {
   }
   return false;
 }
+
+bool is_null (CloudPoint point) {
+  if (point.pt.x != 0.0
+      || point.pt.y != 0.0
+      || point.pt.z != 0.0)
+    return false;
+
+  return true;
+}

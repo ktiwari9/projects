@@ -1,5 +1,33 @@
-// author : guido manfred
-// mail : gmanfredi.mail@gmail.com
+/**
+Copyright (c) 2013, LAAS-CNRS
+All rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+* Neither the name of the LAAS-CNRS the
+  names of its contributors may be used to endorse or promote products
+  derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE LAAS-CNRS AND CONTRIBUTORS ``AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE LAAS-CNRS AND CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Guido Manfredi, LAAS-CNRS, August 2013
+*/
+/// author : Guido Manfredi
+/// mail : gmanfredi.mail@gmail.com
 
 #ifndef RPNP_RPNP_H_
 #define RPNP_RPNP_H_
@@ -9,23 +37,61 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
-
+/**
+ * @brief The rpnp class implements the algorithms described in
+ *  A Robust O(n) Solution to the Perspective-n-Point Problem,
+ *  Shiqi Li, Chi Xu, and Ming Xie, Member, IEEE
+ * It allows setting intrinsic parameters, 2D/3D points correspondences
+ * and compute the corresponding pose.
+ * This class also offers functions to get the relative error between
+ * two camera poses or compute the reprojection error for a given pose.
+ * This API is strongly based on the implementation of epnp,
+ * by Vincent Lepetit.
+**/
 class rpnp {
  public:
   rpnp(void);
   ~rpnp();
-
+  /**
+  * @brief Use this function to set the intrinsic parameters of the
+  *       camera.
+  **/
   void set_internal_parameters(const double uc, const double vc,
 			       const double fu, const double fv);
+  /**
+   * @brief Before adding correspondences, you need to set a maximum
+   *       number of correspondences.
+  **/
   void set_maximum_number_of_correspondences(const int n);
+  /**
+   * @brief Clears the currespondences inside the class.
+  **/
   void reset_correspondences(void);
+  /**
+   * @brief Takes a 3D point coordinates (X, Y, Z) and a 2D point
+   *        coordinates (u, v) and save them as a correspondence.
+  **/
   void add_correspondence(const double X, const double Y, const double Z,
 			  const double u, const double v);
+  /**
+   * @brief Uses the given correspondences to compute
+   *        a rotation matrix R and a translation matrix T.
+  **/
   double compute_pose(double R[3][3], double T[3]);
+  /**
+   * @brief Given two rotation and translation matrices, compute the
+   *        relative translation and rotation error.
+  **/
   void relative_error(const double Rtrue[3][3], const double ttrue[3],
                       const double Rest[3][3],  const double test[3],
                       double & rot_err, double & transl_err);
+  /**
+   * @brief Print to stdout the given matrices.
+  **/
   void print_pose(const double R[3][3], const double t[3]);
+  /**
+   * @brief Computes the reprojection error
+  **/
   double reprojection_error(double R[3][3], double t[3]);
 
  private:

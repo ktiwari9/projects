@@ -32,8 +32,8 @@ using namespace std;
 
 Mat GetFundamentalMat(const vector<KeyPoint>& imgpts1,
 					   const vector<KeyPoint>& imgpts2,
-					   vector<KeyPoint>& imgpts1_good,
-					   vector<KeyPoint>& imgpts2_good,
+					   vector<unsigned int>& good_matches1,
+					   vector<unsigned int>& good_matches2,
 					   vector<DMatch>& matches
 					  )
 {
@@ -44,7 +44,7 @@ Mat GetFundamentalMat(const vector<KeyPoint>& imgpts1,
 	//	undistortPoints(imgpts1, imgpts1, cam_matrix, distortion_coeff);
 	//	undistortPoints(imgpts2, imgpts2, cam_matrix, distortion_coeff);
 	//
-	imgpts1_good.clear(); imgpts2_good.clear();
+	good_matches1.clear(); good_matches2.clear();
 
 	vector<KeyPoint> imgpts1_tmp;
 	vector<KeyPoint> imgpts2_tmp;
@@ -69,13 +69,12 @@ Mat GetFundamentalMat(const vector<KeyPoint>& imgpts1,
 
 	vector<DMatch> new_matches;
 	cout << "F keeping " << countNonZero(status) << " / " << status.size() << endl;
-	for (unsigned int i=0; i<status.size(); i++) {
+	for (size_t i=0; i<status.size(); i++) {
 		if (status[i])
 		{
-			imgpts1_good.push_back(imgpts1_tmp[i]);
-			imgpts2_good.push_back(imgpts2_tmp[i]);
-
-			if (matches.size() <= 0) { //points already aligned...
+      good_matches1.push_back (matches[i].queryIdx);
+      good_matches2.push_back (matches[i].trainIdx);
+      if (matches.size() <= 0) { //points already aligned...
 				new_matches.push_back(DMatch(matches[i].queryIdx,matches[i].trainIdx,matches[i].distance));
 			} else {
 				new_matches.push_back(matches[i]);
@@ -83,7 +82,7 @@ Mat GetFundamentalMat(const vector<KeyPoint>& imgpts1,
 		}
 	}
 
-	cout << matches.size() << " matches before, " << new_matches.size() << " matches after Fundamental Matrix\n";
+	//cout << matches.size() << " matches before, " << good_matches1.size() << " matches after Fundamental Matrix\n";
 	matches = new_matches; //keep only those points who survived the fundamental matrix
 
 	return F;
@@ -118,7 +117,7 @@ bool TestTriangulation(const vector<CloudPoint>& pcloud, const Matx34d& P, vecto
 	int count = countNonZero(status);
 
 	double percentage = ((double)count / (double)pcloud.size());
-	cout << count << "/" << pcloud.size() << " = " << percentage*100.0 << "% are in front of camera" << endl;
+	//cout << count << "/" << pcloud.size() << " = " << percentage*100.0 << "% are in front of camera" << endl;
 	if(percentage < 0.75)
 		return false; //less than 75% of the points are in front of the camera
 
@@ -195,20 +194,20 @@ bool FindCameraMatrices2D2D(const Mat& K,
 						const Mat& distcoeff,
 						const vector<KeyPoint>& imgpts1,
 						const vector<KeyPoint>& imgpts2,
-						vector<KeyPoint>& imgpts1_good,
-						vector<KeyPoint>& imgpts2_good,
+						vector<unsigned int>& good_matches1,
+						vector<unsigned int>& good_matches2,
 						Matx34d& P,
 						Matx34d& P1,
 						vector<DMatch>& matches,
-						vector<CloudPoint>& outCloud
-						)
+						vector<CloudPoint>& outCloud)
 {
 	//Find camera matrices
 	{
 		cout << "Find camera matrices...";
 		//double t = getTickCount();
 
-		Mat F= GetFundamentalMat(imgpts1,imgpts2,imgpts1_good,imgpts2_good,matches);
+		Mat F= GetFundamentalMat(imgpts1, imgpts2,
+                             good_matches1, good_matches2,matches);
 		if(matches.size() < 50) { // || ((double)imgpts1_good.size() / (double)imgpts1.size()) < 0.25
 			cerr << "not enough inliers after F matrix" << endl;
 			return false;
@@ -218,7 +217,8 @@ bool FindCameraMatrices2D2D(const Mat& K,
 		Mat_<double> E = K.t() * F * K; //according to HZ (9.12)
 
 		//according to http://en.wikipedia.org/wiki/Essential_matrix#Properties_of_the_essential_matrix
-		if(fabsf(determinant(E)) > 1e-07) {
+		//if(fabsf(determinant(E)) > 1e-07) {
+		if(fabsf(determinant(E)) > 1e-06) {
 			cout << "det(E) != 0 : " << determinant(E) << "\n";
 			P1 = 0;
 			return false;
@@ -251,6 +251,11 @@ bool FindCameraMatrices2D2D(const Mat& K,
 			//cout << "Testing P1 " << endl << Mat(P1) << endl;
 
 			vector<CloudPoint> pcloud,pcloud1; vector<KeyPoint> corresp;
+			vector<KeyPoint> imgpts1_good, imgpts2_good;
+			for (size_t i=0; i<good_matches1.size (); ++i) {
+        imgpts1_good.push_back (imgpts1[good_matches1[i]]);
+        imgpts2_good.push_back (imgpts1[good_matches2[i]]);
+			}
 			double reproj_error1 = TriangulatePoints(imgpts1_good, imgpts2_good, K, Kinv, distcoeff, P, P1, pcloud, corresp);
 			double reproj_error2 = TriangulatePoints(imgpts2_good, imgpts1_good, K, Kinv, distcoeff, P1, P, pcloud1, corresp);
 			vector<uchar> tmp_status;

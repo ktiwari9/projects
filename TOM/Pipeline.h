@@ -28,15 +28,15 @@ class Pipeline {
   void operator<<(const Image img);
   void extract (Image &img);
   void match (Image &img1, Image &img2);
-  void compute_pose (Image img1, Image &img2);
+  void compute_pose (Image &img1, Image &img2);
   void triangulate (Image &img1, Image &img2);
   void adjust_bundle ();
 
   Object build_object ();
   void save_object (std::string path);
 
-  void find_camera_matrix2D2D (Image img1, Image img2, cv::Matx34d &P);
-  void find_camera_matrix3D2D (Image img1, Image img2, cv::Matx34d &P);
+  void find_camera_matrix2D2D (Image &img1, Image &img2, cv::Matx34d &P);
+  void find_camera_matrix3D2D (Image &img1, Image &img2, cv::Matx34d &P);
 
 // private:
   std::vector<CloudPoint> merge_pointcloud (std::vector< std::vector<CloudPoint> > clouds);

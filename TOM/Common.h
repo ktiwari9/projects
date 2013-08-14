@@ -63,3 +63,4 @@ void open_imgs_dir(char* dir_name,
 void imshow_250x250(const std::string& name_, const cv::Mat& patch);
 
 bool is_in (CloudPoint point, std::vector<CloudPoint> cloud);
+bool is_null (CloudPoint point);

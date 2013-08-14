@@ -22,26 +22,18 @@ bool TestTriangulation(const std::vector<CloudPoint>& pcloud, const cv::Matx34d&
 
 cv::Mat GetFundamentalMat(	const std::vector<cv::KeyPoint>& imgpts1,
 							const std::vector<cv::KeyPoint>& imgpts2,
-							std::vector<cv::KeyPoint>& imgpts1_good,
-							std::vector<cv::KeyPoint>& imgpts2_good,
-							std::vector<cv::DMatch>& matches
-#ifdef __SFM__DEBUG__
-							,const cv::Mat& = cv::Mat(), const cv::Mat& = cv::Mat()
-#endif
-						  );
+							std::vector<unsigned int>& good_matches1,
+							std::vector<unsigned int>& good_matches2,
+							std::vector<cv::DMatch>& matches);
 
 bool FindCameraMatrices2D2D (const cv::Mat& K,
                       const cv::Mat& Kinv,
                       const cv::Mat& distcoeff,
                       const std::vector<cv::KeyPoint>& imgpts1,
                       const std::vector<cv::KeyPoint>& imgpts2,
-                      std::vector<cv::KeyPoint>& imgpts1_good,
-                      std::vector<cv::KeyPoint>& imgpts2_good,
+                      std::vector<unsigned int>& good_matches1,
+                      std::vector<unsigned int>& good_matches2,
                       cv::Matx34d& P,
                       cv::Matx34d& P1,
                       std::vector<cv::DMatch>& matches,
-                      std::vector<CloudPoint>& outCloud
-          #ifdef __SFM__DEBUG__
-                      ,const cv::Mat& = cv::Mat(), const cv::Mat& = cv::Mat()
-          #endif
-                      );
+                      std::vector<CloudPoint>& outCloud);

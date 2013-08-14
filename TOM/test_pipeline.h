@@ -3,13 +3,19 @@
 #include "SynPNP.h"
 #include "Pipeline.h"
 
-const int n = 100;
-const double noise = 5;
-
+const int n = 1000;
+const double noise = 10;
+/*
+const double uc = 384;
+const double vc = 288;
+const double fu = 768;
+const double fv = 768;
+*/
 const double uc = 320;
 const double vc = 240;
 const double fu = 800;
 const double fv = 800;
+
 const double a = 0;
 const double b = 0;
 const double c = 0;

@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="Common.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="5530" topLine="159" />
+	<File name="BundleAdjuster.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1652" topLine="60" />
+	</File>
+	<File name="Common.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="6079" topLine="168" />
+	</File>
+	<File name="Common.h" open="1" top="0" tabpos="5">
+		<Cursor position="2545" topLine="32" />
+	</File>
+	<File name="FindCameraMatrices2D2D.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="2553" topLine="68" />
+	</File>
+	<File name="Image.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="669" topLine="9" />
+	</File>
+	<File name="Image.h" open="0" top="0" tabpos="0">
+		<Cursor position="635" topLine="7" />
+	</File>
+	<File name="Pipeline.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="7019" topLine="156" />
+	</File>
+	<File name="Pipeline.h" open="1" top="0" tabpos="8">
+		<Cursor position="1086" topLine="6" />
+	</File>
+	<File name="Triangulation.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="4237" topLine="116" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="996" topLine="15" />
+		<Cursor position="305" topLine="22" />
+	</File>
+	<File name="test_pipeline.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="4064" topLine="123" />
+	</File>
+	<File name="test_pipeline.h" open="1" top="1" tabpos="10">
+		<Cursor position="100" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

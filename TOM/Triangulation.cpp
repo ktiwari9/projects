@@ -105,7 +105,7 @@ double TriangulatePoints(const vector<KeyPoint>& pt_set1,
 				0,		0,		0,		1);
 	Matx44d P1inv(P1_.inv());
 
-	cout << "Triangulating...";
+	//cout << "Triangulating...";
 	//double t = getTickCount();
 	vector<double> reproj_error;
 	unsigned int pts_size = pt_set1.size();

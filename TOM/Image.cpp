@@ -85,6 +85,10 @@ void Image::add_descriptors (Mat descriptors) {
   desc_ = descriptors;
 }
 
+void Image::set_matches (int id, std::vector<unsigned int> index) {
+  matches_[id] = index;
+}
+
 void Image::set_point3d (vector<Point3f> points3d) {
   for (size_t i=0; i<points3d.size(); ++i) {
     CloudPoint cpt;

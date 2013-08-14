@@ -96,7 +96,7 @@ void Pipeline::match (Image &img1, Image &img2) {
   img2.add_match (img1.id_, idx2);
 }
 
-void Pipeline::compute_pose (Image img1, Image &img2) {
+void Pipeline::compute_pose (Image &img1, Image &img2) {
   Matx34d P;
   int n = kf_.size();
   if ( n <= 2 ) {// Npoints
@@ -112,26 +112,48 @@ void Pipeline::compute_pose (Image img1, Image &img2) {
 }
 
 void Pipeline::triangulate (Image &img1, Image &img2) {
-  vector<KeyPoint> correspImg1Pt;
-  vector<CloudPoint> pointcloud;
-  cout << img1.kpts(img2.id_).size () << endl;
-  TriangulatePoints(img1.kpts(img2.id_),
-                    img2.kpts(img1.id_),
+  vector<KeyPoint> correspImg1Pt, kpts1, kpts2;
+  vector<CloudPoint> pointcloud, pointcloud_good;
+  vector<unsigned int> good_matches1, good_matches2;
+  kpts1 = img1.kpts(img2.id_);
+  kpts2 = img2.kpts(img1.id_);
+  TriangulatePoints(kpts1, kpts2,
                     K_, Kinv_, dist_coeffs_,
                     img1.P_, img2.P_,
                     pointcloud,
                     correspImg1Pt);
-  vector<Point2f> p2d1 = img1.p2d (img2.id_);
-  vector<Point2f> p2d2 = img2.p2d (img1.id_);
+  /*
+  for(int i=0;i<pointcloud.size();i++)
+	cout << pointcloud[i].reprojection_error << endl;
+	*/
+	// Compute "too high" reprojection error : get the 80% precentile
+	vector<double> reprj_errors;
+	for(int i=0;i<pointcloud.size();i++)
+	  reprj_errors.push_back(pointcloud[i].reprojection_error);
+	std::sort(reprj_errors.begin(),reprj_errors.end());
+	double reproj_error_thresh = reprj_errors[4 * reprj_errors.size() / 5] * 2.4;
+	// Filter out outlier points with high reprojection and corresponding matches
+  for (size_t i=0; i<pointcloud.size (); ++i) {
+    if (pointcloud[i].reprojection_error < reproj_error_thresh) {
+      pointcloud_good.push_back (pointcloud[i]);
+      good_matches1.push_back (img1.matches_[img2.id_][i]);
+      good_matches2.push_back (img2.matches_[img1.id_][i]);
+    }
+  }
+  img1.set_matches (img2.id_, good_matches1);
+  img2.set_matches (img1.id_, good_matches2);
+
   vector<DMatch> matches = img1.matches (img2); // 1->2 matches
-  for (size_t i=0; i<pointcloud.size(); ++i) {
-    pointcloud[i].imgpt_for_img.push_back (matches[i].queryIdx);
-    pointcloud[i].imgpt_for_img.push_back (matches[i].trainIdx);
+  for (size_t i=0; i<pointcloud_good.size(); ++i) {
+    pointcloud_good[i].imgpt_for_img.push_back (matches[i].queryIdx);
+    pointcloud_good[i].imgpt_for_img.push_back (matches[i].trainIdx);
     //cout << pointcloud[i].imgpt_for_img.size () << endl;
   }
 
-  img1.add_point3d (img2.id_, pointcloud);
-  img2.add_point3d (img1.id_, pointcloud);
+  img1.add_point3d (img2.id_, pointcloud_good);
+  img2.add_point3d (img1.id_, pointcloud_good);
+  cout << "Triangulate : keeping " << img1.kpts(img2.id_).size ()
+        << "/" << kpts1.size () << " keypoints." << endl;
 }
 
 void Pipeline::adjust_bundle () {
@@ -150,30 +172,30 @@ void Pipeline::adjust_bundle () {
   cout << endl;
 }
 
-void Pipeline::find_camera_matrix2D2D (Image img1, Image img2, Matx34d &P) {
+void Pipeline::find_camera_matrix2D2D (Image &img1, Image &img2, Matx34d &P) {
   vector<CloudPoint> out_cloud;
-  vector<KeyPoint> good_kpts1, good_kpts2;
+  vector<unsigned int> good_matches1, good_matches2;
   Matx34d P0 (1, 0, 0, 0,
               0, 1, 0, 0,
               0, 0, 1, 0);
   vector<DMatch> match = img1.matches(img2);
   FindCameraMatrices2D2D (K_, Kinv_, dist_coeffs_,
                           img1.kpts(), img2.kpts(),
-                          good_kpts1, good_kpts2,
+                          good_matches1, good_matches2,
                           P0, P,
                           match,
                           out_cloud);
+  img1.set_matches (img2.id_, good_matches1);
+  img2.set_matches (img1.id_, good_matches2);
 }
 
-void Pipeline::find_camera_matrix3D2D (Image img1, Image img2,
+void Pipeline::find_camera_matrix3D2D (Image &img1, Image &img2,
                                         Matx34d &P) {
   cv::Mat_<double> rvec, R, t;
   std::vector<cv::Point3f> p3d;
   for (size_t i=0; i<p3d.size(); ++i)
     p3d.push_back (img1.p3d(img2.id_)[i].pt);
   std::vector<cv::Point2f> p2d = img2.p2d(img1.id_);
-  cout << p3d.size () << endl;
-  cout << p2d.size () << endl;
 
   bool success =
   FindCameraMatrices3D2D (rvec, t, R,
@@ -195,7 +217,7 @@ vector<CloudPoint> Pipeline::merge_pointcloud (vector< vector<CloudPoint> > clou
   int count = 0;
   for (size_t i=0; i<clouds.size (); ++i) {
     for (size_t j=0; j<clouds[i].size (); ++j) {
-      if ( !is_in (clouds[i][j], res) )
+      if ( !is_in (clouds[i][j], res) && !is_null (clouds[i][j]) )
         res.push_back (clouds[i][j]);
     }
   }

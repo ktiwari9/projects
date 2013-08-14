@@ -43,6 +43,7 @@ namespace
 			Vector2d p = cams[i].projectPoint(distortion, Xs[j]);
 
 			double reprojectionError = norm_L2(f0 * (p - measurements[k]));
+      //cout << reprojectionError << endl;
 			meanReprojectionError += reprojectionError;
 		}
 		cout << "mean reprojection error (in pixels): " << meanReprojectionError/K << endl;

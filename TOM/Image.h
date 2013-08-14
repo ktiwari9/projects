@@ -19,6 +19,7 @@ class Image {
   void set_image (cv::Mat image);
   void add_keypoints (std::vector<cv::KeyPoint> keypoints);
   void add_descriptors (cv::Mat descriptors);
+  void set_matches (int id, std::vector<unsigned int> index);
   void set_point3d (std::vector<CloudPoint> p3d);
   void set_point3d (std::vector<cv::Point3f> p3d);
   void add_point3d (int id, std::vector<CloudPoint> p3d);
